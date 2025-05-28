@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -38,7 +39,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?q=80&w=3880&auto=format&fit=crop')`,
+            backgroundImage: `url('/lovable-uploads/8ccdccb9-cd3f-4d30-a7fd-30b455d4919e.png')`,
             filter: 'brightness(0.3)'
           }}
         />
