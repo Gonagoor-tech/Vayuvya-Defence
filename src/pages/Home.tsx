@@ -23,12 +23,36 @@ const Home = () => {
   ];
 
   const features = [
-    '100% Indigenous Technology',
-    'Scalable Thrust Configurations',
-    'Designed for Tactical Platforms',
-    'Lightweight & Compact',
-    'Jet-A1/Kerosene Fuel Compatible',
-    'Reliable in Harsh Mission Conditions'
+    {
+      icon: '🇮🇳',
+      title: '100% Indigenous Technology',
+      description: 'Fully developed in India with no foreign dependencies'
+    },
+    {
+      icon: '⚡',
+      title: 'Scalable Thrust Configurations',
+      description: 'Adaptable designs for various mission requirements'
+    },
+    {
+      icon: '🎯',
+      title: 'Designed for Tactical Platforms',
+      description: 'Optimized for UAVs, drones, and defense applications'
+    },
+    {
+      icon: '🪶',
+      title: 'Lightweight & Compact',
+      description: 'Maximum performance in minimal form factor'
+    },
+    {
+      icon: '⛽',
+      title: 'Jet-A1/Kerosene Fuel Compatible',
+      description: 'Works with standard aviation fuel systems'
+    },
+    {
+      icon: '🛡️',
+      title: 'Reliable in Harsh Mission Conditions',
+      description: 'Built to withstand extreme operational environments'
+    }
   ];
 
   return (
@@ -39,7 +63,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/lovable-uploads/8ccdccb9-cd3f-4d30-a7fd-30b455d4919e.png')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?q=80&w=3880&auto=format&fit=crop')`,
             filter: 'brightness(0.3)'
           }}
         />
@@ -104,15 +128,34 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Why Choose Us Section with Modern Cards */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16">Why Choose Trishul Defence?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-center space-x-3 bg-gray-900 p-4 rounded-lg">
-                <div className="text-green-400 text-xl">✅</div>
-                <span className="text-gray-300">{feature}</span>
+              <div 
+                key={index} 
+                className="group relative bg-gradient-to-br from-gray-900/80 to-black/80 p-6 rounded-xl border border-gray-700/50 backdrop-blur-sm transition-all duration-500 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer overflow-hidden"
+              >
+                {/* Animated background gradient on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="text-3xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                    {feature.description}
+                  </p>
+                </div>
+
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
           </div>
