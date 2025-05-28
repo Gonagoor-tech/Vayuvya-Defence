@@ -73,25 +73,25 @@ const Home = () => {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
             Empowering India's Defence with
-            <span className="text-blue-400 block">Indigenous Jet Engine Technology</span>
+            <span className="text-blue-400 block mt-2">Indigenous Jet Engine Technology</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
             Advanced Micro Jet Engines | Made in India, Built for the Future
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto">
             <Link 
               to="/products" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center text-sm sm:text-base"
             >
-              Explore Our Products <ArrowRight className="ml-2 h-5 w-5" />
+              Explore Our Products <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Link>
             <Link 
               to="/about" 
-              className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
             >
               Learn More About Us
             </Link>
@@ -100,10 +100,10 @@ const Home = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-8">Advancing India's Aerospace Future</h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Advancing India's Aerospace Future</h2>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Trishul Defence is a propulsion technology company committed to designing and manufacturing 
             micro jet engines for unmanned aerial systems (UAS), loitering munitions, and other aerospace 
             platforms. Our mission is to power India's future in defence with reliable, compact, and 
@@ -113,15 +113,15 @@ const Home = () => {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16">Our Capabilities</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 sm:mb-16">Our Capabilities</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {capabilities.map((capability, index) => (
-              <div key={index} className="bg-black/50 p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:scale-105">
-                <div className="text-4xl mb-4">{capability.icon}</div>
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">{capability.title}</h3>
-                <p className="text-gray-300">{capability.description}</p>
+              <div key={index} className="bg-black/50 p-6 sm:p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:scale-105">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{capability.icon}</div>
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-blue-400">{capability.title}</h3>
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">{capability.description}</p>
               </div>
             ))}
           </div>
@@ -129,27 +129,27 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section with Modern Cards */}
-      <section className="py-20 bg-black">
+      <section className="py-12 sm:py-16 md:py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16">Why Choose Trishul Defence?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 sm:mb-16">Why Choose Trishul Defence?</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <div 
                 key={index} 
-                className="group relative bg-gradient-to-br from-gray-900/80 to-black/80 p-6 rounded-xl border border-gray-700/50 backdrop-blur-sm transition-all duration-500 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer overflow-hidden"
+                className="group relative bg-gradient-to-br from-gray-900/80 to-black/80 p-5 sm:p-6 rounded-xl border border-gray-700/50 backdrop-blur-sm transition-all duration-500 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer overflow-hidden"
               >
                 {/* Animated background gradient on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="text-3xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4 transform group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg font-semibold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  <p className="text-gray-400 text-xs sm:text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                     {feature.description}
                   </p>
                 </div>
@@ -163,54 +163,54 @@ const Home = () => {
       </section>
 
       {/* Featured Product Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Featured Product</h2>
-            <h3 className="text-2xl text-blue-400 font-semibold">TRJ-M1 Micro Jet Engine</h3>
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Featured Product</h2>
+            <h3 className="text-xl sm:text-2xl text-blue-400 font-semibold">TRJ-M1 Micro Jet Engine</h3>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-xl text-gray-300 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
                 TRJ-M1 is our flagship micro turbojet engine designed for high-efficiency propulsion 
                 in compact air platforms. Built with modern materials and advanced aerothermal 
                 engineering, it ensures optimal performance across a range of defence applications.
               </p>
               
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="bg-black/50 p-4 rounded-lg border border-gray-700">
-                  <div className="text-blue-400 font-semibold">Thrust Output</div>
-                  <div className="text-2xl font-bold">~250N</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <div className="bg-black/50 p-3 sm:p-4 rounded-lg border border-gray-700">
+                  <div className="text-blue-400 font-semibold text-sm sm:text-base">Thrust Output</div>
+                  <div className="text-lg sm:text-2xl font-bold">~250N</div>
                 </div>
-                <div className="bg-black/50 p-4 rounded-lg border border-gray-700">
-                  <div className="text-blue-400 font-semibold">Weight</div>
-                  <div className="text-2xl font-bold">&lt;5 kg</div>
+                <div className="bg-black/50 p-3 sm:p-4 rounded-lg border border-gray-700">
+                  <div className="text-blue-400 font-semibold text-sm sm:text-base">Weight</div>
+                  <div className="text-lg sm:text-2xl font-bold">&lt;5 kg</div>
                 </div>
-                <div className="bg-black/50 p-4 rounded-lg border border-gray-700">
-                  <div className="text-blue-400 font-semibold">Fuel Type</div>
-                  <div className="text-lg font-bold">Jet-A1/Kerosene</div>
+                <div className="bg-black/50 p-3 sm:p-4 rounded-lg border border-gray-700">
+                  <div className="text-blue-400 font-semibold text-sm sm:text-base">Fuel Type</div>
+                  <div className="text-sm sm:text-lg font-bold">Jet-A1/Kerosene</div>
                 </div>
-                <div className="bg-black/50 p-4 rounded-lg border border-gray-700">
-                  <div className="text-blue-400 font-semibold">Applications</div>
-                  <div className="text-sm">UAVs, Loitering Munitions, Target Drones</div>
+                <div className="bg-black/50 p-3 sm:p-4 rounded-lg border border-gray-700">
+                  <div className="text-blue-400 font-semibold text-sm sm:text-base">Applications</div>
+                  <div className="text-xs sm:text-sm">UAVs, Loitering Munitions, Target Drones</div>
                 </div>
               </div>
               
               <Link 
                 to="/products" 
-                className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base"
               >
-                View Full Product <ArrowRight className="ml-2 h-5 w-5" />
+                View Full Product <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-8 rounded-lg border border-gray-700">
+            <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 sm:p-8 rounded-lg border border-gray-700 order-1 lg:order-2">
               <div className="text-center">
-                <div className="w-48 h-48 mx-auto bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-6xl font-bold">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-3xl sm:text-4xl md:text-6xl font-bold">
                   TRJ-M1
                 </div>
-                <p className="text-gray-400 mt-4">High-Performance Micro Turbojet Engine</p>
+                <p className="text-gray-400 mt-3 sm:mt-4 text-sm sm:text-base">High-Performance Micro Turbojet Engine</p>
               </div>
             </div>
           </div>
@@ -218,10 +218,10 @@ const Home = () => {
       </section>
 
       {/* Atmanirbhar Bharat Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-8">Atmanirbhar Bharat in Aerospace</h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Atmanirbhar Bharat in Aerospace</h2>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             We are proud contributors to India's vision of self-reliance in defence. Trishul Defence 
             works closely with academia, industry experts, and innovators to build the next generation 
             of propulsion technologies.
@@ -230,34 +230,34 @@ const Home = () => {
       </section>
 
       {/* Call to Action Sections */}
-      <section className="py-20 bg-black">
+      <section className="py-12 sm:py-16 md:py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {/* Careers CTA */}
-            <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-8 rounded-lg border border-gray-700 text-center">
-              <h3 className="text-2xl font-bold mb-4">Join the Defence Tech Revolution</h3>
-              <p className="text-gray-300 mb-6">
+            <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 sm:p-8 rounded-lg border border-gray-700 text-center">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Join the Defence Tech Revolution</h3>
+              <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
                 We're hiring engineers and innovators to drive the future of propulsion.
               </p>
               <Link 
                 to="/careers" 
-                className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base"
               >
-                Explore Careers <ArrowRight className="ml-2 h-5 w-5" />
+                Explore Careers <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
             </div>
             
             {/* Contact CTA */}
-            <div className="bg-gradient-to-br from-gray-900/20 to-black/20 p-8 rounded-lg border border-gray-700 text-center">
-              <h3 className="text-2xl font-bold mb-4">Let's Collaborate</h3>
-              <p className="text-gray-300 mb-6">
+            <div className="bg-gradient-to-br from-gray-900/20 to-black/20 p-6 sm:p-8 rounded-lg border border-gray-700 text-center">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Let's Collaborate</h3>
+              <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
                 Have a question or proposal? Let's collaborate on India's aerospace future.
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                className="inline-flex items-center border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base"
               >
-                Contact Us <ArrowRight className="ml-2 h-5 w-5" />
+                Contact Us <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
             </div>
           </div>
