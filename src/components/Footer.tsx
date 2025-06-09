@@ -10,17 +10,17 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="text-2xl font-bold text-white mb-4">
-              TRISHUL
+              VAYUVYA
               <span className="text-blue-400 ml-2">DEFENCE</span>
             </div>
             <p className="text-gray-400 mb-4 max-w-md">
-              Indigenous micro jet engine technology for India's defence ecosystem. 
+              Advancing aerospace, software, and AI technologies for India's defence ecosystem. 
               Empowering the future of tactical aerospace platforms.
             </p>
             <div className="text-gray-400">
               <p>Bangalore, India</p>
               <p>+91-7019561885</p>
-              <p>info@trishuldefence.com</p>
+              <p>info@vayuvyadefence.com</p>
             </div>
           </div>
 
@@ -30,6 +30,12 @@ const Footer = () => {
             <div className="space-y-2">
               <Link to="/about" className="block text-gray-400 hover:text-white transition-colors">
                 About Us
+              </Link>
+              <Link to="/aerospace" className="block text-gray-400 hover:text-white transition-colors">
+                Aerospace Division
+              </Link>
+              <Link to="/software" className="block text-gray-400 hover:text-white transition-colors">
+                Software Division
               </Link>
               <Link to="/products" className="block text-gray-400 hover:text-white transition-colors">
                 Products
@@ -48,16 +54,17 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">Technology</h3>
             <div className="space-y-2 text-gray-400">
               <p>Micro Jet Engines</p>
-              <p>Turbojet Systems</p>
-              <p>UAV Propulsion</p>
-              <p>Indigenous Design</p>
+              <p>Satellite Propulsion</p>
+              <p>UAV Systems</p>
+              <p>AI Solutions</p>
+              <p>Software Development</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Trishul Defence Pvt. Ltd. All rights reserved. | Supporting Atmanirbhar Bharat
+            © 2024 Vayuvya Defence Pvt. Ltd. All rights reserved. | Supporting Atmanirbhar Bharat
           </p>
         </div>
       </div>

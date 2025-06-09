@@ -27,10 +27,10 @@ const About = () => {
       <section className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            About <span className="text-blue-400">Trishul Defence</span>
+            About <span className="text-blue-400">Vayuvya Defence</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Pioneering indigenous micro jet engine technology for India's defence ecosystem
+            Pioneering indigenous technologies across aerospace, software, and AI for India's defence ecosystem
           </p>
         </div>
       </section>
@@ -41,16 +41,17 @@ const About = () => {
           <h2 className="text-4xl font-bold text-center mb-16">Who We Are</h2>
           <div className="max-w-4xl mx-auto text-lg text-gray-300 leading-relaxed space-y-6">
             <p>
-              Trishul Defence is a private defence technology company focused on the indigenous 
-              development of micro jet engines for tactical applications. Headquartered in India, 
-              our team consists of aerospace engineers, propulsion specialists, and manufacturing 
-              experts committed to building next-gen turbine solutions for Indian and global defence sectors.
+              Vayuvya Defence is a private defence technology company focused on the indigenous 
+              development of cutting-edge solutions across aerospace, software, and artificial intelligence. 
+              Headquartered in India, our multidisciplinary team consists of aerospace engineers, software 
+              developers, AI specialists, and manufacturing experts committed to building next-generation 
+              technologies for Indian and global defence sectors.
             </p>
             <p>
               Our company was founded with the vision of making India self-reliant in critical 
-              propulsion technologies. We specialize in designing and manufacturing high-performance 
-              micro jet engines that power unmanned aerial systems, loitering munitions, and other 
-              advanced aerospace platforms.
+              defence technologies. We specialize in designing and manufacturing high-performance 
+              micro jet engines, satellite propulsion systems, autonomous aerial platforms, enterprise 
+              software solutions, and responsible AI systems that empower tactical and strategic operations.
             </p>
           </div>
         </div>
@@ -64,10 +65,10 @@ const About = () => {
             <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-8 rounded-lg border border-gray-700">
               <h3 className="text-3xl font-bold mb-6 text-blue-400">Our Mission</h3>
               <p className="text-lg text-gray-300 leading-relaxed">
-                To provide reliable, compact, and high-performance propulsion systems that support 
-                the strategic objectives of India's aerospace and defence ecosystems. We are committed 
-                to delivering indigenous solutions that meet global standards while serving our nation's 
-                security needs.
+                To provide reliable, innovative, and high-performance technology solutions across aerospace, 
+                software, and AI that support the strategic objectives of India's defence and space ecosystems. 
+                We are committed to delivering indigenous solutions that meet global standards while serving 
+                our nation's security and technological advancement needs.
               </p>
             </div>
             
@@ -75,9 +76,10 @@ const About = () => {
             <div className="bg-gradient-to-br from-gray-900/20 to-black/20 p-8 rounded-lg border border-gray-700">
               <h3 className="text-3xl font-bold mb-6 text-blue-400">Our Vision</h3>
               <p className="text-lg text-gray-300 leading-relaxed">
-                To be India's leading innovator in micro jet propulsion systems, contributing to a 
-                self-reliant, secure, and technologically advanced nation. We envision a future where 
-                Indian-designed engines power the next generation of tactical aerospace platforms.
+                To be India's leading innovator in defence technologies, spanning aerospace propulsion, 
+                intelligent software systems, and responsible AI. We envision a future where Indian-designed 
+                and manufactured solutions power the next generation of tactical platforms, space missions, 
+                and digital infrastructure for national security.
               </p>
             </div>
           </div>
@@ -105,8 +107,8 @@ const About = () => {
           <h2 className="text-4xl font-bold mb-8">Strategic Alignment</h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
             Our work supports key national defence objectives and aligns with the mission of 
-            organizations like DRDO, HAL, and GTRE, helping India achieve technological 
-            independence in propulsion.
+            organizations like DRDO, HAL, ISRO, and GTRE, helping India achieve technological 
+            independence across multiple critical domains.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -115,8 +117,8 @@ const About = () => {
               <p className="text-gray-300 text-sm">Collaborative research and development initiatives</p>
             </div>
             <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 rounded-lg border border-gray-700">
-              <h3 className="text-lg font-semibold text-blue-400 mb-2">HAL Collaboration</h3>
-              <p className="text-gray-300 text-sm">Supporting aerospace manufacturing excellence</p>
+              <h3 className="text-lg font-semibold text-blue-400 mb-2">ISRO Collaboration</h3>
+              <p className="text-gray-300 text-sm">Supporting space technology and satellite missions</p>
             </div>
             <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 rounded-lg border border-gray-700">
               <h3 className="text-lg font-semibold text-blue-400 mb-2">GTRE Alignment</h3>

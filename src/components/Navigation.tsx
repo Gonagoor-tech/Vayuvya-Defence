@@ -1,6 +1,13 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { ChevronDown } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,7 +15,6 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
     { name: 'Products', path: '/products' },
     { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },
@@ -23,7 +29,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="text-2xl font-bold text-white">
-              TRISHUL
+              VAYUVYA
               <span className="text-blue-400 ml-2">DEFENCE</span>
             </div>
           </Link>
@@ -43,6 +49,34 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            
+            {/* About Us Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className={`text-sm font-medium transition-colors duration-200 flex items-center ${
+                isActive('/about') || isActive('/aerospace') || isActive('/software')
+                  ? 'text-blue-400'
+                  : 'text-gray-300 hover:text-white'
+              }`}>
+                About Us <ChevronDown className="ml-1 h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-black/95 backdrop-blur-md border-gray-700">
+                <DropdownMenuItem asChild>
+                  <Link to="/about" className="text-gray-300 hover:text-white">
+                    Company Overview
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/aerospace" className="text-gray-300 hover:text-white">
+                    Aerospace Division
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/software" className="text-gray-300 hover:text-white">
+                    Software Division
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           {/* Mobile menu button */}
@@ -78,6 +112,30 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
+              <div className="px-3 py-2">
+                <div className="text-gray-400 text-sm font-medium mb-2">About Us</div>
+                <Link
+                  to="/about"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white"
+                >
+                  Company Overview
+                </Link>
+                <Link
+                  to="/aerospace"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white"
+                >
+                  Aerospace Division
+                </Link>
+                <Link
+                  to="/software"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white"
+                >
+                  Software Division
+                </Link>
+              </div>
             </div>
           </div>
         )}

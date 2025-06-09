@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -30,27 +29,27 @@ const Home = () => {
     },
     {
       icon: '⚡',
-      title: 'Scalable Thrust Configurations',
-      description: 'Adaptable designs for various mission requirements'
+      title: 'Scalable Multi-Domain Solutions',
+      description: 'Aerospace, software, and AI technologies for various mission requirements'
     },
     {
       icon: '🎯',
-      title: 'Designed for Tactical Platforms',
-      description: 'Optimized for UAVs, drones, and defense applications'
+      title: 'Designed for Strategic Platforms',
+      description: 'Optimized for UAVs, satellites, defence applications, and enterprise systems'
     },
     {
       icon: '🪶',
-      title: 'Lightweight & Compact',
-      description: 'Maximum performance in minimal form factor'
+      title: 'Lightweight & Efficient',
+      description: 'Maximum performance with minimal resource footprint'
     },
     {
       icon: '⛽',
-      title: 'Jet-A1/Kerosene Fuel Compatible',
-      description: 'Works with standard aviation fuel systems'
+      title: 'Versatile Fuel & Data Compatibility',
+      description: 'Works with standard systems and multiple data formats'
     },
     {
       icon: '🛡️',
-      title: 'Reliable in Harsh Mission Conditions',
+      title: 'Reliable in Critical Conditions',
       description: 'Built to withstand extreme operational environments'
     }
   ];
@@ -75,11 +74,11 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
             Empowering India's Defence with
-            <span className="text-blue-400 block mt-2">Indigenous Jet Engine Technology</span>
+            <span className="text-blue-400 block mt-2">Advanced Technology Solutions</span>
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
-            Advanced Micro Jet Engines | Made in India, Built for the Future
+            Aerospace Propulsion | Software Solutions | AI Innovation | Made in India, Built for the Future
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto">
@@ -102,12 +101,12 @@ const Home = () => {
       {/* Introduction Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Advancing India's Aerospace Future</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Advancing India's Technology Future</h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Trishul Defence is a propulsion technology company committed to designing and manufacturing 
-            micro jet engines for unmanned aerial systems (UAS), loitering munitions, and other aerospace 
-            platforms. Our mission is to power India's future in defence with reliable, compact, and 
-            efficient jet engines, designed and developed indigenously.
+            Vayuvya Defence is a technology company committed to designing and manufacturing 
+            cutting-edge solutions across aerospace, software, and artificial intelligence. Our mission 
+            is to power India's future in defence with reliable, innovative, and efficient systems, 
+            designed and developed indigenously across multiple critical domains.
           </p>
         </div>
       </section>
@@ -131,7 +130,7 @@ const Home = () => {
       {/* Why Choose Us Section with Modern Cards */}
       <section className="py-12 sm:py-16 md:py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 sm:mb-16">Why Choose Trishul Defence?</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 sm:mb-16">Why Choose Vayuvya Defence?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <div 
@@ -220,11 +219,11 @@ const Home = () => {
       {/* Atmanirbhar Bharat Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Atmanirbhar Bharat in Aerospace</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Atmanirbhar Bharat in Technology</h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            We are proud contributors to India's vision of self-reliance in defence. Trishul Defence 
+            We are proud contributors to India's vision of self-reliance in defence and technology. Vayuvya Defence 
             works closely with academia, industry experts, and innovators to build the next generation 
-            of propulsion technologies.
+            of aerospace, software, and AI technologies that serve our nation's strategic objectives.
           </p>
         </div>
       </section>
