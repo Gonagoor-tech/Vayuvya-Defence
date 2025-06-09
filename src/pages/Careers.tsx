@@ -121,7 +121,6 @@ const Careers = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-4 bg-gray-900 p-6 rounded-lg">
-                <div className="text-green-400 text-2xl">✓</div>
                 <span className="text-lg text-gray-300">{benefit}</span>
               </div>
             ))}
