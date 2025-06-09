@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -9,21 +8,21 @@ const Team = () => {
       name: 'Prashanth Raghu',
       role: 'Co-Founder & CEO',
       bio: 'Aerospace engineer with expertise in propulsion systems and advanced manufacturing. Leading the vision for indigenous defence technology development.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+      image: '/lovable-uploads/96b943e9-cb1f-4542-89e9-80f85ad9c037.png',
       initials: 'PR'
     },
     {
       name: 'Dhanush D B',
       role: 'Co-Founder & CTO',
       bio: 'Software architect and AI specialist focused on developing intelligent systems for aerospace applications and enterprise solutions.',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
+      image: '/lovable-uploads/39a2fdae-d96c-404c-91b3-c9d798d32f97.png',
       initials: 'DD'
     },
     {
       name: 'Raghavendra',
       role: 'Head of Engineering',
       bio: 'Mechanical engineer specializing in micro-propulsion systems and satellite technology. Drives technical excellence across all product lines.',
-      image: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=400&h=400&fit=crop&crop=face',
+      image: '/lovable-uploads/3ad36d1d-996e-499e-9477-efd313c72130.png',
       initials: 'RG'
     }
   ];
@@ -33,7 +32,7 @@ const Team = () => {
       name: 'Pruthviraj',
       role: 'Strategic Advisor',
       bio: 'Industry veteran with extensive experience in defence technology and strategic partnerships. Provides guidance on business development and market expansion.',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
+      image: '/lovable-uploads/de66633b-c246-4a31-9c0d-273536ff816b.png',
       initials: 'PV'
     }
   ];
