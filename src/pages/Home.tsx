@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -5,17 +6,14 @@ import { ArrowRight } from 'lucide-react';
 const Home = () => {
   const capabilities = [
     {
-      icon: '🛠',
       title: 'Indigenous Engine Design',
       description: 'Fully conceptualized and engineered in India to meet global defence standards.'
     },
     {
-      icon: '🚀',
       title: 'High-Performance Micro Engines',
       description: 'Specialized in small turbine engines with high thrust-to-weight ratios.'
     },
     {
-      icon: '🔬',
       title: 'Cutting-Edge R&D',
       description: 'In-house research labs with simulation, testing, and rapid prototyping facilities.'
     }
@@ -23,32 +21,26 @@ const Home = () => {
 
   const features = [
     {
-      icon: '🇮🇳',
       title: '100% Indigenous Technology',
       description: 'Fully developed in India with no foreign dependencies'
     },
     {
-      icon: '⚡',
       title: 'Scalable Multi-Domain Solutions',
       description: 'Aerospace, software, and AI technologies for various mission requirements'
     },
     {
-      icon: '🎯',
       title: 'Designed for Strategic Platforms',
       description: 'Optimized for UAVs, satellites, defence applications, and enterprise systems'
     },
     {
-      icon: '🪶',
       title: 'Lightweight & Efficient',
       description: 'Maximum performance with minimal resource footprint'
     },
     {
-      icon: '⛽',
       title: 'Versatile Fuel & Data Compatibility',
       description: 'Works with standard systems and multiple data formats'
     },
     {
-      icon: '🛡️',
       title: 'Reliable in Critical Conditions',
       description: 'Built to withstand extreme operational environments'
     }
@@ -117,10 +109,22 @@ const Home = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 sm:mb-16">Our Capabilities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {capabilities.map((capability, index) => (
-              <div key={index} className="bg-black/50 p-6 sm:p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:scale-105">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{capability.icon}</div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-blue-400">{capability.title}</h3>
-                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">{capability.description}</p>
+              <div key={index} className="group relative bg-gradient-to-br from-gray-900/80 to-black/80 p-6 sm:p-8 rounded-xl border border-gray-700/50 backdrop-blur-sm transition-all duration-500 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer overflow-hidden">
+                {/* Animated background gradient on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
+                    {capability.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                    {capability.description}
+                  </p>
+                </div>
+
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
           </div>
@@ -142,9 +146,6 @@ const Home = () => {
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
-                  </div>
                   <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">
                     {feature.title}
                   </h3>
@@ -206,10 +207,12 @@ const Home = () => {
             
             <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 sm:p-8 rounded-lg border border-gray-700 order-1 lg:order-2">
               <div className="text-center">
-                <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-3xl sm:text-4xl md:text-6xl font-bold">
-                  TRJ-M1
-                </div>
-                <p className="text-gray-400 mt-3 sm:mt-4 text-sm sm:text-base">High-Performance Micro Turbojet Engine</p>
+                <img 
+                  src="/lovable-uploads/aab6d5f1-c76a-4509-91ed-0f70fa59cf5e.png" 
+                  alt="TRJ-M1 Micro Jet Engine Technical Drawing" 
+                  className="w-full h-auto max-w-md mx-auto mb-4"
+                />
+                <p className="text-gray-400 text-sm sm:text-base">High-Performance Micro Turbojet Engine</p>
               </div>
             </div>
           </div>

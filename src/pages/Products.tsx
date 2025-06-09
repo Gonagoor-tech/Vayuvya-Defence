@@ -53,10 +53,12 @@ const Products = () => {
             
             <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-8 rounded-lg border border-gray-700">
               <div className="text-center">
-                <div className="w-64 h-64 mx-auto bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-4xl font-bold mb-4">
-                  TRJ-M1
-                </div>
-                <p className="text-gray-400">Micro Turbojet Engine</p>
+                <img 
+                  src="/lovable-uploads/aab6d5f1-c76a-4509-91ed-0f70fa59cf5e.png" 
+                  alt="TRJ-M1 Micro Jet Engine Technical Drawing" 
+                  className="w-full h-auto max-w-lg mx-auto mb-4"
+                />
+                <p className="text-gray-400">Micro Turbojet Engine Technical Specifications</p>
               </div>
             </div>
           </div>
