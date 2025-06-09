@@ -53,7 +53,7 @@ const Navigation = () => {
             {/* About Us Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger className={`text-sm font-medium transition-colors duration-200 flex items-center ${
-                isActive('/about') || isActive('/aerospace') || isActive('/software')
+                isActive('/about') || isActive('/team')
                   ? 'text-blue-400'
                   : 'text-gray-300 hover:text-white'
               }`}>
@@ -66,13 +66,8 @@ const Navigation = () => {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/aerospace" className="text-gray-300 hover:text-white">
-                    Aerospace Division
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/software" className="text-gray-300 hover:text-white">
-                    Software Division
+                  <Link to="/team" className="text-gray-300 hover:text-white">
+                    Team
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -122,18 +117,11 @@ const Navigation = () => {
                   Company Overview
                 </Link>
                 <Link
-                  to="/aerospace"
+                  to="/team"
                   onClick={() => setIsMenuOpen(false)}
                   className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white"
                 >
-                  Aerospace Division
-                </Link>
-                <Link
-                  to="/software"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white"
-                >
-                  Software Division
+                  Team
                 </Link>
               </div>
             </div>
