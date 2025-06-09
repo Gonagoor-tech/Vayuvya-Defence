@@ -31,7 +31,7 @@ const Contact = () => {
       <section className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Contact <span className="text-blue-400">Trishul Defence</span>
+            Contact <span className="text-blue-400">Vayuvya Defence</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Let's build together. Whether you're an OEM, defence stakeholder, investor, or technologist — we'd love to connect.
@@ -51,7 +51,7 @@ const Contact = () => {
                 <div className="bg-black/50 p-6 rounded-lg border border-gray-700">
                   <h3 className="text-xl font-semibold mb-4 text-blue-400">Registered Address</h3>
                   <div className="text-gray-300">
-                    <p className="font-semibold">Trishul Defence Pvt. Ltd.</p>
+                    <p className="font-semibold">Vayuvya Defence Pvt. Ltd.</p>
                     <p>Bangalore</p>
                     <p>India</p>
                   </div>
@@ -62,7 +62,7 @@ const Contact = () => {
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-center space-x-3">
                       <span className="text-blue-400">📧</span>
-                      <span>info@trishuldefence.com</span>
+                      <span>info@vayuvyadefence.com</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <span className="text-blue-400">📞</span>

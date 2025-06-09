@@ -31,7 +31,7 @@ const Careers = () => {
             Join the Defence Tech <span className="text-blue-400">Revolution</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            At Trishul Defence, we're not just building engines — we're building the future of Indian aerospace technology
+            At Vayuvya Defence, we're not just building engines — we're building the future of Indian aerospace technology
           </p>
         </div>
       </section>
@@ -141,7 +141,7 @@ const Careers = () => {
             <h3 className="text-xl font-semibold mb-4">How to Apply</h3>
             <p className="text-gray-300 mb-6">
               Send your CV and cover letter to: 
-              <span className="text-blue-400 font-semibold"> careers@trishuldefence.com</span>
+              <span className="text-blue-400 font-semibold"> careers@vayuvyadefence.com</span>
             </p>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
               Send Application
