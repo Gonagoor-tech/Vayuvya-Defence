@@ -29,7 +29,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/88e0972e-e528-48ff-be94-2fd1e1eeb4bc.png" 
+              src="/lovable-uploads/e5ae8e77-1bb3-4c6a-888e-76ddf869d66d.png" 
               alt="Vayuvya Defence Logo" 
               className="h-8 w-auto"
             />
