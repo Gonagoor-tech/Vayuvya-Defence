@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -25,6 +24,13 @@ const Team = () => {
       bio: 'Mechanical engineer specializing in micro-propulsion systems and satellite technology. Drives technical excellence across all product lines.',
       image: '/lovable-uploads/3ad36d1d-996e-499e-9477-efd313c72130.png',
       initials: 'RG'
+    },
+    {
+      name: 'Nishant Kumar Dean',
+      role: 'Senior Engineer',
+      bio: 'Experienced engineer contributing to cutting-edge aerospace technology development and system optimization for defence applications.',
+      image: '/lovable-uploads/6065d473-f5ae-4551-9c0c-7354ed4dc584.png',
+      initials: 'NK'
     }
   ];
 
@@ -35,6 +41,13 @@ const Team = () => {
       bio: 'Industry veteran with extensive experience in defence technology and strategic partnerships. Provides guidance on business development and market expansion.',
       image: '/lovable-uploads/de66633b-c246-4a31-9c0d-273536ff816b.png',
       initials: 'PV'
+    },
+    {
+      name: 'Ramesh',
+      role: 'Technical Advisor',
+      bio: 'Seasoned expert in aerospace engineering and technology development. Provides valuable insights on technical strategy and innovation.',
+      image: '/lovable-uploads/e6b9e2e2-fccc-4e27-81c9-1fbb67e33d1a.png',
+      initials: 'RM'
     }
   ];
 
@@ -56,7 +69,7 @@ const Team = () => {
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16">Leadership Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} className="bg-black/50 border-gray-700 hover:border-blue-400 transition-all duration-300">
                 <CardContent className="p-8 text-center">
@@ -78,22 +91,20 @@ const Team = () => {
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16">Advisory Board</h2>
-          <div className="flex justify-center">
-            <div className="max-w-md">
-              {advisors.map((advisor, index) => (
-                <Card key={index} className="bg-gray-900/50 border-gray-700 hover:border-blue-400 transition-all duration-300">
-                  <CardContent className="p-8 text-center">
-                    <Avatar className="w-32 h-32 mx-auto mb-6">
-                      <AvatarImage src={advisor.image} alt={advisor.name} />
-                      <AvatarFallback className="text-2xl bg-blue-600">{advisor.initials}</AvatarFallback>
-                    </Avatar>
-                    <h3 className="text-2xl font-bold mb-2 text-white">{advisor.name}</h3>
-                    <p className="text-blue-400 font-semibold mb-4">{advisor.role}</p>
-                    <p className="text-gray-300 leading-relaxed">{advisor.bio}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {advisors.map((advisor, index) => (
+              <Card key={index} className="bg-gray-900/50 border-gray-700 hover:border-blue-400 transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <Avatar className="w-32 h-32 mx-auto mb-6">
+                    <AvatarImage src={advisor.image} alt={advisor.name} />
+                    <AvatarFallback className="text-2xl bg-blue-600">{advisor.initials}</AvatarFallback>
+                  </Avatar>
+                  <h3 className="text-2xl font-bold mb-2 text-white">{advisor.name}</h3>
+                  <p className="text-blue-400 font-semibold mb-4">{advisor.role}</p>
+                  <p className="text-gray-300 leading-relaxed">{advisor.bio}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
