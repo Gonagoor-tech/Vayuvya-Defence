@@ -27,7 +27,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/88e0972e-e528-48ff-be94-2fd1e1eeb4bc.png" 
+              alt="Vayuvya Defence Logo" 
+              className="h-8 w-auto"
+            />
             <div className="text-2xl font-bold text-white">
               VAYUVYA
               <span className="text-blue-400 ml-2">DEFENCE</span>
