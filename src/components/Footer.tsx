@@ -3,6 +3,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-black/95 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -17,7 +21,7 @@ const Footer = () => {
               Advancing aerospace, software, and AI technologies for India's defence ecosystem. 
               Empowering the future of tactical aerospace platforms.
             </p>
-            <div className="text-gray-400">
+            <div className="text-gray-400 space-y-1">
               <p>Bangalore, India</p>
               <p>+91-7019561885</p>
               <p>info@vayuvya.com</p>
@@ -28,16 +32,39 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2">
-              <Link to="/about" className="block text-gray-400 hover:text-white transition-colors">
+              <Link 
+                to="/about" 
+                onClick={scrollToTop}
+                className="block text-gray-400 hover:text-white transition-colors duration-200"
+              >
                 About Us
               </Link>
-              <Link to="/products" className="block text-gray-400 hover:text-white transition-colors">
+              <Link 
+                to="/team" 
+                onClick={scrollToTop}
+                className="block text-gray-400 hover:text-white transition-colors duration-200"
+              >
+                Team
+              </Link>
+              <Link 
+                to="/products" 
+                onClick={scrollToTop}
+                className="block text-gray-400 hover:text-white transition-colors duration-200"
+              >
                 Products
               </Link>
-              <Link to="/careers" className="block text-gray-400 hover:text-white transition-colors">
+              <Link 
+                to="/careers" 
+                onClick={scrollToTop}
+                className="block text-gray-400 hover:text-white transition-colors duration-200"
+              >
                 Careers
               </Link>
-              <Link to="/contact" className="block text-gray-400 hover:text-white transition-colors">
+              <Link 
+                to="/contact" 
+                onClick={scrollToTop}
+                className="block text-gray-400 hover:text-white transition-colors duration-200"
+              >
                 Contact
               </Link>
             </div>

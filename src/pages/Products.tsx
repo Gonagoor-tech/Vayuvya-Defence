@@ -1,7 +1,12 @@
 
 import React from 'react';
+import { Button } from "@/components/ui/button";
 
 const Products = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const specifications = [
     { label: 'Thrust', value: '4 kN' },
     { label: 'Dry Weight', value: '<5 kg' },
@@ -17,6 +22,18 @@ const Products = () => {
     'Target Drones',
     'Experimental Air Vehicles'
   ];
+
+  const handleDatasheetRequest = () => {
+    scrollToTop();
+    // Add functionality for datasheet request
+    console.log('Datasheet requested');
+  };
+
+  const handleScheduleDemo = () => {
+    scrollToTop();
+    // Add functionality for scheduling demo
+    console.log('Demo scheduled');
+  };
 
   return (
     <div className="relative">
@@ -68,7 +85,7 @@ const Products = () => {
             <h3 className="text-3xl font-bold text-center mb-12">Key Specifications</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {specifications.map((spec, index) => (
-                <div key={index} className="bg-black/50 p-6 rounded-lg border border-gray-700">
+                <div key={index} className="bg-black/50 p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition-all duration-300">
                   <div className="text-blue-400 font-semibold mb-2">{spec.label}</div>
                   <div className="text-xl font-bold text-white">{spec.value}</div>
                 </div>
@@ -81,7 +98,7 @@ const Products = () => {
             <h3 className="text-3xl font-bold text-center mb-12">Applications</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {applications.map((app, index) => (
-                <div key={index} className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 rounded-lg border border-gray-700 text-center">
+                <div key={index} className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 rounded-lg border border-gray-700 text-center hover:border-blue-400 transition-all duration-300">
                   <div className="text-lg font-semibold text-blue-400">{app}</div>
                 </div>
               ))}
@@ -114,17 +131,24 @@ const Products = () => {
             <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-8 rounded-lg border border-gray-700 text-center">
               <h3 className="text-xl font-semibold mb-4">Technical Datasheet</h3>
               <p className="text-gray-300 mb-6">Download detailed specifications and performance data</p>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+              <Button 
+                onClick={handleDatasheetRequest}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+              >
                 Request Datasheet
-              </button>
+              </Button>
             </div>
             
             <div className="bg-gradient-to-br from-gray-900/20 to-black/20 p-8 rounded-lg border border-gray-700 text-center">
               <h3 className="text-xl font-semibold mb-4">Schedule Demo</h3>
               <p className="text-gray-300 mb-6">Arrange a demonstration or technical discussion</p>
-              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+              <Button 
+                onClick={handleScheduleDemo}
+                variant="outline"
+                className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+              >
                 Schedule Discussion
-              </button>
+              </Button>
             </div>
           </div>
         </div>

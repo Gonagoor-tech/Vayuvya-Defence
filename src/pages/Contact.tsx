@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,10 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -20,7 +25,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Here you would typically send the form data to your backend
+    scrollToTop();
     alert('Thank you for your message. We will get back to you soon!');
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
@@ -151,12 +156,12 @@ const Contact = () => {
                   />
                 </div>
                 
-                <button
+                <Button
                   type="submit"
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                 >
                   Send Message
-                </button>
+                </Button>
               </form>
             </div>
           </div>
@@ -173,15 +178,15 @@ const Contact = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 rounded-lg border border-gray-700">
+            <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition-all duration-300">
               <h3 className="text-lg font-semibold text-blue-400 mb-2">OEM Partners</h3>
               <p className="text-gray-300 text-sm">Integration of our engines into your platforms</p>
             </div>
-            <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 rounded-lg border border-gray-700">
+            <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition-all duration-300">
               <h3 className="text-lg font-semibold text-blue-400 mb-2">Research Institutions</h3>
               <p className="text-gray-300 text-sm">Collaborative R&D and technology development</p>
             </div>
-            <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 rounded-lg border border-gray-700">
+            <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition-all duration-300">
               <h3 className="text-lg font-semibold text-blue-400 mb-2">Investors</h3>
               <p className="text-gray-300 text-sm">Join us in building the future of defence tech</p>
             </div>

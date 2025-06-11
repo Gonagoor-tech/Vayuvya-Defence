@@ -1,7 +1,17 @@
 
 import React from 'react';
+import { Button } from "@/components/ui/button";
 
 const Careers = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleApplyClick = () => {
+    scrollToTop();
+    window.location.href = 'mailto:careers@vayuvya.com';
+  };
+
   const engineeringRoles = [
     'Propulsion Design Engineer',
     'Combustor & Turbine Aerothermal Analyst',
@@ -120,7 +130,7 @@ const Careers = () => {
           <h2 className="text-4xl font-bold text-center mb-16">Why Join Us?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4 bg-gray-900 p-6 rounded-lg">
+              <div key={index} className="flex items-center space-x-4 bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors duration-300">
                 <span className="text-lg text-gray-300">{benefit}</span>
               </div>
             ))}
@@ -140,11 +150,14 @@ const Careers = () => {
             <h3 className="text-xl font-semibold mb-4">How to Apply</h3>
             <p className="text-gray-300 mb-6">
               Send your CV and cover letter to: 
-              <span className="text-blue-400 font-semibold"> careers@vayuvyadefence.com</span>
+              <span className="text-blue-400 font-semibold"> careers@vayuvya.com</span>
             </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+            <Button 
+              onClick={handleApplyClick}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            >
               Send Application
-            </button>
+            </Button>
           </div>
         </div>
       </section>
