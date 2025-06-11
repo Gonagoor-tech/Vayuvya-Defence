@@ -41,19 +41,16 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`text-sm font-medium transition-colors duration-200 ${
-                  isActive(item.path)
-                    ? 'text-blue-400'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            <Link
+              to="/"
+              className={`text-sm font-medium transition-colors duration-200 ${
+                isActive('/')
+                  ? 'text-blue-400'
+                  : 'text-gray-300 hover:text-white'
+              }`}
+            >
+              Home
+            </Link>
             
             {/* About Us Dropdown */}
             <DropdownMenu>
@@ -77,6 +74,20 @@ const Navigation = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+
+            {navItems.slice(1).map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`text-sm font-medium transition-colors duration-200 ${
+                  isActive(item.path)
+                    ? 'text-blue-400'
+                    : 'text-gray-300 hover:text-white'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile menu button */}
@@ -98,20 +109,17 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-black/95 backdrop-blur-md">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
-                    isActive(item.path)
-                      ? 'text-blue-400'
-                      : 'text-gray-300 hover:text-white'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              <Link
+                to="/"
+                onClick={() => setIsMenuOpen(false)}
+                className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
+                  isActive('/')
+                    ? 'text-blue-400'
+                    : 'text-gray-300 hover:text-white'
+                }`}
+              >
+                Home
+              </Link>
               <div className="px-3 py-2">
                 <div className="text-gray-400 text-sm font-medium mb-2">About Us</div>
                 <Link
@@ -129,6 +137,20 @@ const Navigation = () => {
                   Team
                 </Link>
               </div>
+              {navItems.slice(1).map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
+                    isActive(item.path)
+                      ? 'text-blue-400'
+                      : 'text-gray-300 hover:text-white'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </div>
         )}

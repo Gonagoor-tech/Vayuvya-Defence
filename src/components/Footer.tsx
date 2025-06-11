@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="text-gray-400">
               <p>Bangalore, India</p>
               <p>+91-7019561885</p>
-              <p>info@vayuvyadefence.com</p>
+              <p>info@vayuvya.com</p>
             </div>
           </div>
 
@@ -30,12 +30,6 @@ const Footer = () => {
             <div className="space-y-2">
               <Link to="/about" className="block text-gray-400 hover:text-white transition-colors">
                 About Us
-              </Link>
-              <Link to="/aerospace" className="block text-gray-400 hover:text-white transition-colors">
-                Aerospace Division
-              </Link>
-              <Link to="/software" className="block text-gray-400 hover:text-white transition-colors">
-                Software Division
               </Link>
               <Link to="/products" className="block text-gray-400 hover:text-white transition-colors">
                 Products

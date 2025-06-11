@@ -62,7 +62,7 @@ const Contact = () => {
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-center space-x-3">
                       <span className="text-blue-400">📧</span>
-                      <span>info@vayuvyadefence.com</span>
+                      <span>info@vayuvya.com</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <span className="text-blue-400">📞</span>

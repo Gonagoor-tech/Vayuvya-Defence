@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -7,14 +8,14 @@ const Team = () => {
     {
       name: 'Prashanth Raghu',
       role: 'Co-Founder & CEO',
-      bio: 'Aerospace engineer with expertise in propulsion systems and advanced manufacturing. Leading the vision for indigenous defence technology development.',
+      bio: 'Software architect and AI specialist focused on developing intelligent systems for aerospace applications and enterprise solutions.',
       image: '/lovable-uploads/96b943e9-cb1f-4542-89e9-80f85ad9c037.png',
       initials: 'PR'
     },
     {
       name: 'Dhanush D B',
       role: 'Co-Founder & CTO',
-      bio: 'Software architect and AI specialist focused on developing intelligent systems for aerospace applications and enterprise solutions.',
+      bio: 'Aerospace engineer with expertise in propulsion systems and advanced manufacturing. Leading the vision for indigenous defence technology development.',
       image: '/lovable-uploads/39a2fdae-d96c-404c-91b3-c9d798d32f97.png',
       initials: 'DD'
     },

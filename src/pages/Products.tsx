@@ -3,7 +3,7 @@ import React from 'react';
 
 const Products = () => {
   const specifications = [
-    { label: 'Thrust', value: '250 Newtons (N)' },
+    { label: 'Thrust', value: '4 kN' },
     { label: 'Dry Weight', value: '<5 kg' },
     { label: 'Fuel Type', value: 'Jet-A1 / Aviation Kerosene' },
     { label: 'Design Life', value: '20+ operational hours' },
@@ -45,7 +45,7 @@ const Products = () => {
             <div>
               <h3 className="text-3xl font-bold mb-6">Product Overview</h3>
               <p className="text-lg text-gray-300 leading-relaxed">
-                The TRJ-M1 is a compact turbojet engine delivering ~250N thrust, designed specifically 
+                The TRJ-M1 is a compact turbojet engine delivering 4kN thrust, designed specifically 
                 for use in UAVs, loitering munitions, and other tactical platforms. It is lightweight, 
                 fuel-efficient, and engineered for rapid integration into airframes.
               </p>
