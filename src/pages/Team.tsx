@@ -18,20 +18,21 @@ const Team = () => {
       image: '/lovable-uploads/39a2fdae-d96c-404c-91b3-c9d798d32f97.png',
       initials: 'DD'
     },
+     {
+      name: 'Nishant Kumar Dean',
+      role: 'Senior Engineer',
+      bio: 'Experienced engineer contributing to cutting-edge aerospace technology development and system optimization for defence applications.',
+      image: '/lovable-uploads/6065d473-f5ae-4551-9c0c-7354ed4dc584.png',
+      initials: 'NK'
+    },
     {
       name: 'Raghavendra',
       role: 'Head of Engineering',
       bio: 'Mechanical engineer specializing in micro-propulsion systems and satellite technology. Drives technical excellence across all product lines.',
       image: '/lovable-uploads/3ad36d1d-996e-499e-9477-efd313c72130.png',
       initials: 'RG'
-    },
-    {
-      name: 'Nishant Kumar Dean',
-      role: 'Senior Engineer',
-      bio: 'Experienced engineer contributing to cutting-edge aerospace technology development and system optimization for defence applications.',
-      image: '/lovable-uploads/6065d473-f5ae-4551-9c0c-7354ed4dc584.png',
-      initials: 'NK'
     }
+   
   ];
 
   const advisors = [
@@ -69,7 +70,7 @@ const Team = () => {
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16">Leadership Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} className="bg-black/50 border-gray-700 hover:border-blue-400 transition-all duration-300">
                 <CardContent className="p-8 text-center">

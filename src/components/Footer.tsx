@@ -77,8 +77,6 @@ const Footer = () => {
               <p>Micro Jet Engines</p>
               <p>Satellite Propulsion</p>
               <p>UAV Systems</p>
-              <p>AI Solutions</p>
-              <p>Software Development</p>
             </div>
           </div>
         </div>

@@ -70,7 +70,7 @@ const Home = () => {
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
-            Aerospace Propulsion | Software Solutions | AI Innovation | Made in India, Built for the Future
+          Made in India, Built for the Future
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto">
@@ -181,7 +181,7 @@ const Home = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
                 <div className="bg-black/50 p-3 sm:p-4 rounded-lg border border-gray-700">
                   <div className="text-blue-400 font-semibold text-sm sm:text-base">Thrust Output</div>
-                  <div className="text-lg sm:text-2xl font-bold">~250N</div>
+                  <div className="text-lg sm:text-2xl font-bold">~4KN</div>
                 </div>
                 <div className="bg-black/50 p-3 sm:p-4 rounded-lg border border-gray-700">
                   <div className="text-blue-400 font-semibold text-sm sm:text-base">Weight</div>
