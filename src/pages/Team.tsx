@@ -20,7 +20,7 @@ const Team = () => {
     },
      {
       name: 'Nishant Kumar Dean',
-      role: 'Senior Engineer',
+      role: ' CSO – Chief Strategy Officer',
       bio: 'Experienced engineer contributing to cutting-edge aerospace technology development and system optimization for defence applications.',
       image: '/lovable-uploads/6065d473-f5ae-4551-9c0c-7354ed4dc584.png',
       initials: 'NK'
@@ -44,7 +44,7 @@ const Team = () => {
       initials: 'PV'
     },
     {
-      name: 'Ramesh',
+      name: ' Ramesh Kumar ',
       role: 'Technical Advisor',
       bio: 'Seasoned expert in aerospace engineering and technology development. Provides valuable insights on technical strategy and innovation.',
       image: '/lovable-uploads/e6b9e2e2-fccc-4e27-81c9-1fbb67e33d1a.png',

@@ -17,6 +17,10 @@ const Footer = () => {
               VAYUVYA
               <span className="text-blue-400 ml-2">DEFENCE</span>
             </div>
+             <div className="text-2xl font-bold text-white mb-4">
+             Powered By
+              <span className="text-blue-400 ml-2">Gonagoor Tech</span>
+            </div>
             <p className="text-gray-400 mb-4 max-w-md">
               Advancing aerospace, software, and AI technologies for India's defence ecosystem. 
               Empowering the future of tactical aerospace platforms.
