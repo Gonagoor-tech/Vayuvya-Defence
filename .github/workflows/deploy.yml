@@ -1,5 +1,3 @@
-# .github/workflows/deploy.yml
-
 name: Deploy to GitHub Pages
 
 on:
@@ -17,4 +15,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .  # because index.html is in root
+          publish_dir: .                # change this if your index.html is inside a folder like "dist" or "build"
+          publish_branch: gh-pages      # this avoids git error 128
+
