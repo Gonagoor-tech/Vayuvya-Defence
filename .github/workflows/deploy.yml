@@ -1,20 +1,22 @@
 name: Deploy to GitHub Pages
-
 on:
   push:
     branches: [main]
+
+permissions:
+  contents: write  # allows pushing updates
+  pages: write     # allows GH Pages build trigger
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Deploy to GitHub Pages
+      - uses: actions/checkout@v4
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .                # change this if your index.html is inside a folder like "dist" or "build"
-          publish_branch: gh-pages      # this avoids git error 128
+          publish_dir: .
+          publish_branch: gh-pages
+
 
