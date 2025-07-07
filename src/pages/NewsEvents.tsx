@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, MapPin, Users, Trophy } from 'lucide-react';
+import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 
 const NewsEvents = () => {
   const scrollToTop = () => {
@@ -51,111 +51,88 @@ const NewsEvents = () => {
     }
   ];
 
-  const upcomingEvents = [
-    {
-      title: "Defence Technology Summit 2025",
-      date: "February 15-17, 2025",
-      location: "Bangalore, India",
-      description: "Join us at India's premier defence technology conference where we'll be presenting our latest innovations."
-    },
-    {
-      title: "Aerospace Innovation Expo",
-      date: "March 10-12, 2025",
-      location: "Hyderabad, India",
-      description: "Showcasing next-generation propulsion systems and AI-driven aerospace solutions."
-    },
-    {
-      title: "Startup India Defence Conclave",
-      date: "April 5-7, 2025",
-      location: "New Delhi, India",
-      description: "Participating in discussions about indigenous defence technology development."
-    }
-  ];
-
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'Exhibition': return 'bg-blue-500';
-      case 'Technology': return 'bg-green-500';
-      case 'Partnership': return 'bg-purple-500';
-      case 'Media': return 'bg-orange-500';
-      default: return 'bg-gray-500';
+      case 'Exhibition': return 'bg-gradient-to-r from-blue-500 to-blue-600';
+      case 'Technology': return 'bg-gradient-to-r from-emerald-500 to-emerald-600';
+      case 'Partnership': return 'bg-gradient-to-r from-purple-500 to-purple-600';
+      case 'Media': return 'bg-gradient-to-r from-orange-500 to-orange-600';
+      default: return 'bg-gradient-to-r from-gray-500 to-gray-600';
     }
   };
 
   return (
-    <div className="relative">
+    <div className="relative font-inter">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-6xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
             News & <span className="text-blue-400">Events</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Stay updated with Vayuvya Defence's latest achievements, exhibitions, and upcoming events
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Stay updated with Vayuvya Defence's latest achievements, exhibitions, and breakthrough innovations
           </p>
         </div>
       </section>
 
       {/* Recent News */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16">Recent News</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              Latest Updates
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {newsItems.map((item) => (
-              <Card key={item.id} className="bg-black/50 border-gray-700 hover:border-blue-400 transition-all duration-300 overflow-hidden">
-                <div className="relative h-64 overflow-hidden">
+              <Card key={item.id} className="group bg-black/40 backdrop-blur-sm border-gray-700/50 hover:border-blue-400/50 transition-all duration-500 overflow-hidden rounded-2xl shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2">
+                <div className="relative h-72 overflow-hidden">
                   <img 
                     src={item.image} 
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getCategoryColor(item.category)}`}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div className="absolute top-6 left-6">
+                    <span className={`px-4 py-2 rounded-full text-sm font-semibold text-white ${getCategoryColor(item.category)} shadow-lg backdrop-blur-sm`}>
                       {item.category}
                     </span>
                   </div>
+                  <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <ExternalLink className="w-5 h-5 text-white" />
+                    </div>
+                  </div>
                 </div>
-                <CardHeader>
-                  <div className="flex items-center text-sm text-gray-400 mb-2">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    <span className="mr-4">{item.date}</span>
-                    <MapPin className="w-4 h-4 mr-2" />
-                    <span>{item.location}</span>
+                
+                <CardHeader className="p-8">
+                  <div className="flex items-center text-sm text-blue-300/80 mb-4 space-x-6">
+                    <div className="flex items-center">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      <span className="font-medium">{item.date}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <MapPin className="w-4 h-4 mr-2" />
+                      <span className="font-medium">{item.location}</span>
+                    </div>
                   </div>
-                  <CardTitle className="text-white text-xl">{item.title}</CardTitle>
+                  <CardTitle className="text-white text-2xl font-bold leading-tight mb-4 group-hover:text-blue-300 transition-colors duration-300">
+                    {item.title}
+                  </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 leading-relaxed">{item.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16">Upcoming Events</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {upcomingEvents.map((event, index) => (
-              <Card key={index} className="bg-gray-900/50 border-gray-700 hover:border-blue-400 transition-all duration-300">
-                <CardHeader>
-                  <div className="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full mb-4 mx-auto">
-                    <Calendar className="w-6 h-6 text-white" />
+                
+                <CardContent className="px-8 pb-8">
+                  <p className="text-gray-300 leading-relaxed text-lg font-light">
+                    {item.description}
+                  </p>
+                  <div className="mt-6">
+                    <button className="text-blue-400 font-semibold hover:text-blue-300 transition-colors duration-200 flex items-center group/btn">
+                      Read More 
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-200" />
+                    </button>
                   </div>
-                  <CardTitle className="text-white text-xl text-center">{event.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <div className="flex items-center justify-center text-blue-400 mb-2">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    <span className="font-semibold">{event.date}</span>
-                  </div>
-                  <div className="flex items-center justify-center text-gray-400 mb-4">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    <span>{event.location}</span>
-                  </div>
-                  <p className="text-gray-300 leading-relaxed">{event.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -164,24 +141,36 @@ const NewsEvents = () => {
       </section>
 
       {/* Media Gallery */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16">Event Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              Event Gallery
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-500 mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               "/lovable-uploads/9e922077-ae7e-4703-aae7-13c51fb9d879.png",
               "/lovable-uploads/f3a1f760-246b-49e6-bc89-1be9744dcafb.png",
               "/lovable-uploads/5b01e4a1-3015-43f0-8159-082f39414c11.png",
               "/lovable-uploads/adfd63e7-92d6-4276-b7e1-b1968ece4207.png"
             ].map((image, index) => (
-              <div key={index} className="relative overflow-hidden rounded-lg aspect-square group">
+              <div key={index} className="relative overflow-hidden rounded-2xl aspect-square group cursor-pointer shadow-2xl">
                 <img 
                   src={image} 
                   alt={`Event ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-white font-semibold">View Details</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-100 scale-95">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-4 mx-auto">
+                      <ExternalLink className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="text-white font-semibold text-lg">View Details</span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -190,18 +179,26 @@ const NewsEvents = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Stay Connected</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Don't miss our latest updates and upcoming events. Follow us for real-time news and insights.
+      <section className="py-24 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            Stay Connected
+          </h2>
+          <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+            Don't miss our latest updates and breakthrough innovations. Follow us for real-time news and insights into the future of defence technology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
-              Subscribe to Newsletter
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <button className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-xl hover:shadow-blue-500/25 hover:-translate-y-1">
+              <span className="flex items-center justify-center">
+                Subscribe to Newsletter
+                <ExternalLink className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+              </span>
             </button>
-            <button className="border border-gray-600 hover:border-blue-400 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
-              Contact Media Team
+            <button className="group border-2 border-gray-600 hover:border-blue-400 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-blue-400/10 hover:-translate-y-1">
+              <span className="flex items-center justify-center">
+                Contact Media Team
+                <ExternalLink className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+              </span>
             </button>
           </div>
         </div>
