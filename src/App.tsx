@@ -11,6 +11,7 @@ import Team from "./pages/Team";
 import Aerospace from "./pages/Aerospace";
 import Software from "./pages/Software";
 import Products from "./pages/Products";
+import NewsEvents from "./pages/NewsEvents";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/aerospace" element={<Aerospace />} />
             <Route path="/software" element={<Software />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/news-events" element={<NewsEvents />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
