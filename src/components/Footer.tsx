@@ -69,7 +69,7 @@ const Footer = () => {
                 onClick={scrollToTop}
                 className="block text-gray-400 hover:text-white transition-colors duration-200"
               >
-                Contact
+                Contact Us
               </Link>
             </div>
           </div>
