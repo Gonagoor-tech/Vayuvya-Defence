@@ -52,10 +52,20 @@ const Team = () => {
     }
   ];
 
+  const interns = [
+    {
+      name: 'Vijay Vittal',
+      role: 'Embedded Intern',
+      bio: 'Embedded systems intern focusing on firmware for microcontrollers, RTOS applications, hardware bring-up, C/C++ drivers and sensor integration for aerospace and defence platforms.',
+      image: '/lovable-uploads/vijay vittal.png',
+      initials: 'VV'
+    }
+  ];
+
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black">
+      <section className="py-32 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Meet Our <span className="text-blue-400">Team</span>
@@ -67,8 +77,20 @@ const Team = () => {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-black overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=3870&auto=format&fit=crop')",
+            filter: 'brightness(0.35)'
+          }}
+        />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/80" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16">Leadership Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
@@ -103,6 +125,28 @@ const Team = () => {
                   <h3 className="text-2xl font-bold mb-2 text-white">{advisor.name}</h3>
                   <p className="text-blue-400 font-semibold mb-4">{advisor.role}</p>
                   <p className="text-gray-300 leading-relaxed">{advisor.bio}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Intern Team */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-16">Intern Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {interns.map((intern, index) => (
+              <Card key={index} className="bg-black/50 border-gray-700 hover:border-blue-400 transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <Avatar className="w-32 h-32 mx-auto mb-6">
+                    <AvatarImage src={intern.image} alt={intern.name} />
+                    <AvatarFallback className="text-2xl bg-blue-600">{intern.initials}</AvatarFallback>
+                  </Avatar>
+                  <h3 className="text-2xl font-bold mb-2 text-white">{intern.name}</h3>
+                  <p className="text-blue-400 font-semibold mb-4">{intern.role}</p>
+                  <p className="text-gray-300 leading-relaxed">{intern.bio}</p>
                 </CardContent>
               </Card>
             ))}

@@ -97,5 +97,32 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    font-weight: 400;
   }
 }
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .font-bebas {
+    font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  .font-avenir-next {
+    font-family: 'Avenir Next', 'AvenirNextLTPro-Regular', 'AvenirNext-Regular', 'Avenir', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.01em;
+  }
+
+  .font-poppins {
+    font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.01em;
+  }
+}
+

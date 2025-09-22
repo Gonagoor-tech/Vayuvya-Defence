@@ -24,8 +24,9 @@ const About = () => {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-32 bg-black">
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             About <span className="text-blue-400">Vayuvya Defence</span>
           </h1>
