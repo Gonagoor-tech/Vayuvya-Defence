@@ -64,7 +64,7 @@ const Home = () => {
         
         {/* Content */}
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 text-left font-poppins">
-          <h1 className="font-poppins font-[200] text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2 sm:mb-4 leading-tight tracking-tight">
+          <h1 className="font-poppins text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[200] mb-2 sm:mb-4 leading-tight tracking-tight">
             Empowering India's Defence with
             <span className="text-blue-400 block mt-1 font-poppins font-[200]">Advanced Technology Solutions</span>
           </h1>
@@ -91,10 +91,13 @@ const Home = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Advancing India's Technology Future</h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+      <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
+        {/* Gradient overlay for readability (no background image) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center font-poppins">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-[200] mb-6 sm:mb-8">Advancing India's Technology Future</h2>
+          <p className="font-[200] text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Vayuvya Defence is a technology company committed to designing and manufacturing 
             cutting-edge solutions across aerospace, software, and artificial intelligence. Our mission 
             is to power India's future in defence with reliable, innovative, and efficient systems, 
@@ -104,9 +107,19 @@ const Home = () => {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 sm:mb-16">Our Capabilities</h2>
+      <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
+        {/* Full-cover background image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('${import.meta.env.BASE_URL}lovable-uploads/lite.png')`
+          }}
+        />
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/70" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-poppins">
+          <h2 className="font-poppins text-2xl sm:text-3xl md:text-4xl font-[200] text-center mb-12 sm:mb-16">Our Capabilities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {capabilities.map((capability, index) => (
               <div key={index} className="group relative bg-gradient-to-br from-gray-900/80 to-black/80 p-6 sm:p-8 rounded-xl border border-gray-700/50 backdrop-blur-sm transition-all duration-500 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer overflow-hidden">
@@ -115,10 +128,10 @@ const Home = () => {
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="font-poppins text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
                     {capability.title}
                   </h3>
-                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  <p className="font-poppins font-normal text-gray-400 text-sm sm:text-base leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                     {capability.description}
                   </p>
                 </div>
@@ -141,12 +154,11 @@ const Home = () => {
             filter: 'brightness(0.3)'
           }}
         />
-        
         {/* Gradient overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 sm:mb-16 text-white">Why Choose Vayuvya Defence?</h2>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-poppins">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-[200] text-center mb-12 sm:mb-16 text-white">Why Choose Vayuvya Defence?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <div 
@@ -158,10 +170,10 @@ const Home = () => {
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="font-poppins text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-400 text-xs sm:text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  <p className="font-poppins font-normal text-gray-400 text-xs sm:text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                     {feature.description}
                   </p>
                 </div>
@@ -176,15 +188,15 @@ const Home = () => {
 
       {/* Featured Product Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-poppins">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Featured Product</h2>
-            <h3 className="text-xl sm:text-2xl text-blue-400 font-semibold">TRJ-M1 Micro Jet Engine</h3>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-[200] mb-3 sm:mb-4">Featured Product</h2>
+            <h3 className="text-xl sm:text-2xl text-blue-400 font-[200]">TRJ-M1 Micro Jet Engine</h3>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
+              <p className="font-[200] text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
                 TRJ-M1 is our flagship micro turbojet engine designed for high-efficiency propulsion 
                 in compact air platforms. Built with modern materials and advanced aerothermal 
                 engineering, it ensures optimal performance across a range of defence applications.
@@ -233,9 +245,9 @@ const Home = () => {
 
       {/* Atmanirbhar Bharat Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Atmanirbhar Bharat in Technology</h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center font-poppins">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-[200] mb-6 sm:mb-8">Atmanirbhar Bharat in Technology</h2>
+          <p className="font-[200] text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             We are proud contributors to India's vision of self-reliance in defence and technology. Vayuvya Defence 
             works closely with academia, industry experts, and innovators to build the next generation 
             of aerospace, software, and AI technologies that serve our nation's strategic objectives.
@@ -245,12 +257,12 @@ const Home = () => {
 
       {/* Call to Action Sections */}
       <section className="py-12 sm:py-16 md:py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-poppins">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {/* Careers CTA */}
             <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 sm:p-8 rounded-lg border border-gray-700 text-center">
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Join the Defence Tech Revolution</h3>
-              <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
+              <h3 className="text-xl sm:text-2xl font-[200] mb-3 sm:mb-4">Join the Defence Tech Revolution</h3>
+              <p className="font-[200] text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
                 We're hiring engineers and innovators to drive the future of propulsion.
               </p>
               <Link 
@@ -263,8 +275,8 @@ const Home = () => {
             
             {/* Contact CTA */}
             <div className="bg-gradient-to-br from-gray-900/20 to-black/20 p-6 sm:p-8 rounded-lg border border-gray-700 text-center">
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Let's Collaborate</h3>
-              <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
+              <h3 className="text-xl sm:text-2xl font-[200] mb-3 sm:mb-4">Let's Collaborate</h3>
+              <p className="font-[200] text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
                 Have a question or proposal? Let's collaborate on India's aerospace future.
               </p>
               <Link 

@@ -31,14 +31,24 @@ const Contact = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative font-poppins">
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <section className="relative py-32 overflow-hidden">
+        {/* Background image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('${import.meta.env.BASE_URL}lovable-uploads/R.png')`,
+            filter: 'brightness(0.4)'
+          }}
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-[200] mb-6">
             Contact <span className="text-blue-400">Vayuvya Defence</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="font-[200] text-xl text-gray-300 max-w-3xl mx-auto">
             Let's build together. Whether you're an OEM, defence stakeholder, investor, or technologist — we'd love to connect.
           </p>
         </div>

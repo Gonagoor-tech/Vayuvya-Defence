@@ -62,14 +62,14 @@ const NewsEvents = () => {
   };
 
   return (
-    <div className="relative font-inter">
+    <div className="relative font-poppins">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-6xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
+          <h1 className="text-6xl md:text-7xl font-[200] mb-8 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
             News & <span className="text-blue-400">Events</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="font-[200] text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Stay updated with Vayuvya Defence's latest achievements, exhibitions, and breakthrough innovations
           </p>
         </div>
@@ -79,7 +79,7 @@ const NewsEvents = () => {
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            <h2 className="text-5xl font-semibold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               Latest Updates
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full"></div>
@@ -111,20 +111,20 @@ const NewsEvents = () => {
                   <div className="flex items-center text-sm text-blue-300/80 mb-4 space-x-6">
                     <div className="flex items-center">
                       <Calendar className="w-4 h-4 mr-2" />
-                      <span className="font-medium">{item.date}</span>
+                      <span className="font-normal">{item.date}</span>
                     </div>
                     <div className="flex items-center">
                       <MapPin className="w-4 h-4 mr-2" />
-                      <span className="font-medium">{item.location}</span>
+                      <span className="font-normal">{item.location}</span>
                     </div>
                   </div>
-                  <CardTitle className="text-white text-2xl font-bold leading-tight mb-4 group-hover:text-blue-300 transition-colors duration-300">
+                  <CardTitle className="text-white text-2xl font-semibold leading-tight mb-4 group-hover:text-blue-300 transition-colors duration-300">
                     {item.title}
                   </CardTitle>
                 </CardHeader>
                 
                 <CardContent className="px-8 pb-8">
-                  <p className="text-gray-300 leading-relaxed text-lg font-light">
+                  <p className="text-gray-300 leading-relaxed text-lg font-normal">
                     {item.description}
                   </p>
                   <div className="mt-6">
@@ -144,7 +144,7 @@ const NewsEvents = () => {
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            <h2 className="text-5xl font-semibold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               Event Gallery
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-500 mx-auto rounded-full"></div>
@@ -181,10 +181,10 @@ const NewsEvents = () => {
       {/* Call to Action */}
       <section className="py-24 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+          <h2 className="text-5xl font-semibold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
             Stay Connected
           </h2>
-          <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+          <p className="font-normal text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
             Don't miss our latest updates and breakthrough innovations. Follow us for real-time news and insights into the future of defence technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
