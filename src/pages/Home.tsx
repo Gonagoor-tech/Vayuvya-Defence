@@ -92,11 +92,59 @@ const Home = () => {
 
       {/* Introduction Section */}
       <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
-        {/* Gradient overlay for readability (no background image) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        {/* Space-like background */}
+        <div className="absolute inset-0 bg-black">
+          {/* Animated stars */}
+          <div className="absolute inset-0">
+            {/* Large stars */}
+            <div className="absolute top-12 left-16 w-1 h-1 bg-white rounded-full animate-pulse"></div>
+            <div className="absolute top-24 left-40 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-1000"></div>
+            <div className="absolute top-36 left-20 w-1 h-1 bg-white rounded-full animate-pulse delay-2000"></div>
+            <div className="absolute top-48 left-56 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse delay-500"></div>
+            <div className="absolute top-64 left-32 w-1 h-1 bg-white rounded-full animate-pulse delay-1500"></div>
+            <div className="absolute top-80 left-48 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-3000"></div>
+            <div className="absolute top-96 left-16 w-1 h-1 bg-white rounded-full animate-pulse delay-2500"></div>
+            
+            {/* More stars scattered */}
+            <div className="absolute top-20 right-24 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse delay-700"></div>
+            <div className="absolute top-32 right-40 w-1 h-1 bg-white rounded-full animate-pulse delay-1200"></div>
+            <div className="absolute top-48 right-20 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-1800"></div>
+            <div className="absolute top-68 right-36 w-1 h-1 bg-white rounded-full animate-pulse delay-2200"></div>
+            <div className="absolute top-88 right-28 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse delay-800"></div>
+            
+            {/* Additional stars for depth */}
+            <div className="absolute top-28 left-1/4 w-0.5 h-0.5 bg-blue-100 rounded-full animate-pulse delay-400"></div>
+            <div className="absolute top-52 left-3/4 w-1 h-1 bg-white rounded-full animate-pulse delay-1600"></div>
+            <div className="absolute top-76 left-1/3 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-2800"></div>
+            <div className="absolute top-92 left-2/3 w-1 h-1 bg-white rounded-full animate-pulse delay-600"></div>
+            
+            {/* Distant stars for more depth */}
+            <div className="absolute top-16 left-1/2 w-0.5 h-0.5 bg-blue-100 rounded-full animate-pulse delay-900"></div>
+            <div className="absolute top-40 left-1/5 w-0.5 h-0.5 bg-white rounded-full animate-pulse delay-1300"></div>
+            <div className="absolute top-56 left-4/5 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse delay-1900"></div>
+            <div className="absolute top-80 left-1/6 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-2400"></div>
+            <div className="absolute top-96 left-5/6 w-0.5 h-0.5 bg-white rounded-full animate-pulse delay-1100"></div>
+            
+            {/* Very distant tiny stars */}
+            <div className="absolute top-18 left-1/3 w-0.5 h-0.5 bg-blue-50 rounded-full animate-pulse delay-600"></div>
+            <div className="absolute top-72 left-2/5 w-0.5 h-0.5 bg-blue-100 rounded-full animate-pulse delay-1400"></div>
+            <div className="absolute top-88 left-1/8 w-0.5 h-0.5 bg-white rounded-full animate-pulse delay-2100"></div>
+          </div>
+          
+          {/* Subtle nebula effect */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-purple-900/5 to-indigo-900/10"></div>
+          
+          {/* Cosmic dust particles */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400/20 rounded-full blur-sm animate-pulse delay-2000"></div>
+            <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-purple-400/30 rounded-full blur-sm animate-pulse delay-1500"></div>
+            <div className="absolute top-2/3 left-1/3 w-1.5 h-1.5 bg-indigo-400/25 rounded-full blur-sm animate-pulse delay-3000"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-1 h-1 bg-blue-300/20 rounded-full blur-sm animate-pulse delay-2500"></div>
+          </div>
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center font-poppins">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-[200] mb-6 sm:mb-8">Advancing India's Technology Future</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-[200] mb-6 sm:mb-8 text-white">Advancing India's Technology Future</h2>
           <p className="font-[200] text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Vayuvya Defence is a technology company committed to designing and manufacturing 
             cutting-edge solutions across aerospace, software, and artificial intelligence. Our mission 
@@ -187,10 +235,61 @@ const Home = () => {
       </section>
 
       {/* Featured Product Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-poppins">
+      <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
+        {/* Space-like background */}
+        <div className="absolute inset-0 bg-black">
+          {/* Animated stars */}
+          <div className="absolute inset-0">
+            {/* Large stars */}
+            <div className="absolute top-10 left-10 w-1 h-1 bg-white rounded-full animate-pulse"></div>
+            <div className="absolute top-20 left-32 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-1000"></div>
+            <div className="absolute top-32 left-16 w-1 h-1 bg-white rounded-full animate-pulse delay-2000"></div>
+            <div className="absolute top-40 left-48 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse delay-500"></div>
+            <div className="absolute top-60 left-24 w-1 h-1 bg-white rounded-full animate-pulse delay-1500"></div>
+            <div className="absolute top-80 left-40 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-3000"></div>
+            <div className="absolute top-96 left-12 w-1 h-1 bg-white rounded-full animate-pulse delay-2500"></div>
+            
+            {/* More stars scattered */}
+            <div className="absolute top-16 right-20 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse delay-700"></div>
+            <div className="absolute top-28 right-32 w-1 h-1 bg-white rounded-full animate-pulse delay-1200"></div>
+            <div className="absolute top-44 right-16 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-1800"></div>
+            <div className="absolute top-64 right-28 w-1 h-1 bg-white rounded-full animate-pulse delay-2200"></div>
+            <div className="absolute top-88 right-24 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse delay-800"></div>
+            
+            {/* Additional stars for depth */}
+            <div className="absolute top-24 left-1/4 w-0.5 h-0.5 bg-blue-100 rounded-full animate-pulse delay-400"></div>
+            <div className="absolute top-48 left-3/4 w-1 h-1 bg-white rounded-full animate-pulse delay-1600"></div>
+            <div className="absolute top-72 left-1/3 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-2800"></div>
+            <div className="absolute top-96 left-2/3 w-1 h-1 bg-white rounded-full animate-pulse delay-600"></div>
+            
+            {/* Distant stars for more depth */}
+            <div className="absolute top-8 left-1/2 w-0.5 h-0.5 bg-blue-100 rounded-full animate-pulse delay-900"></div>
+            <div className="absolute top-36 left-1/5 w-0.5 h-0.5 bg-white rounded-full animate-pulse delay-1300"></div>
+            <div className="absolute top-52 left-4/5 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse delay-1900"></div>
+            <div className="absolute top-76 left-1/6 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-2400"></div>
+            <div className="absolute top-92 left-5/6 w-0.5 h-0.5 bg-white rounded-full animate-pulse delay-1100"></div>
+            
+            {/* Very distant tiny stars */}
+            <div className="absolute top-14 left-1/3 w-0.5 h-0.5 bg-blue-50 rounded-full animate-pulse delay-600"></div>
+            <div className="absolute top-68 left-2/5 w-0.5 h-0.5 bg-blue-100 rounded-full animate-pulse delay-1400"></div>
+            <div className="absolute top-84 left-1/8 w-0.5 h-0.5 bg-white rounded-full animate-pulse delay-2100"></div>
+          </div>
+          
+          {/* Subtle nebula effect */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-purple-900/5 to-indigo-900/10"></div>
+          
+          {/* Cosmic dust particles */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400/20 rounded-full blur-sm animate-pulse delay-2000"></div>
+            <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-purple-400/30 rounded-full blur-sm animate-pulse delay-1500"></div>
+            <div className="absolute top-2/3 left-1/3 w-1.5 h-1.5 bg-indigo-400/25 rounded-full blur-sm animate-pulse delay-3000"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-1 h-1 bg-blue-300/20 rounded-full blur-sm animate-pulse delay-2500"></div>
+          </div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-poppins">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-[200] mb-3 sm:mb-4">Featured Product</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-[200] mb-3 sm:mb-4 text-white">Featured Product</h2>
             <h3 className="text-xl sm:text-2xl text-blue-400 font-[200]">TRJ-M1 Micro Jet Engine</h3>
           </div>
           
@@ -203,21 +302,33 @@ const Home = () => {
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
-                <div className="bg-black/50 p-3 sm:p-4 rounded-lg border border-gray-700">
+                <div className="relative bg-black/60 p-3 sm:p-4 rounded-lg border border-gray-600/50 backdrop-blur-sm overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-lg"></div>
+                  <div className="relative z-10">
                   <div className="text-blue-400 font-semibold text-sm sm:text-base">Thrust Output</div>
-                  <div className="text-lg sm:text-2xl font-bold">~4KN</div>
+                    <div className="text-lg sm:text-2xl font-bold text-white">~4KN</div>
+                  </div>
                 </div>
-                <div className="bg-black/50 p-3 sm:p-4 rounded-lg border border-gray-700">
+                <div className="relative bg-black/60 p-3 sm:p-4 rounded-lg border border-gray-600/50 backdrop-blur-sm overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-lg"></div>
+                  <div className="relative z-10">
                   <div className="text-blue-400 font-semibold text-sm sm:text-base">Weight</div>
-                  <div className="text-lg sm:text-2xl font-bold">&lt;5 kg</div>
+                    <div className="text-lg sm:text-2xl font-bold text-white">&lt;5 kg</div>
+                  </div>
                 </div>
-                <div className="bg-black/50 p-3 sm:p-4 rounded-lg border border-gray-700">
+                <div className="relative bg-black/60 p-3 sm:p-4 rounded-lg border border-gray-600/50 backdrop-blur-sm overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-lg"></div>
+                  <div className="relative z-10">
                   <div className="text-blue-400 font-semibold text-sm sm:text-base">Fuel Type</div>
-                  <div className="text-sm sm:text-lg font-bold">Jet-A1/Kerosene</div>
+                    <div className="text-sm sm:text-lg font-bold text-white">Jet-A1/Kerosene</div>
+                  </div>
                 </div>
-                <div className="bg-black/50 p-3 sm:p-4 rounded-lg border border-gray-700">
+                <div className="relative bg-black/60 p-3 sm:p-4 rounded-lg border border-gray-600/50 backdrop-blur-sm overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-lg"></div>
+                  <div className="relative z-10">
                   <div className="text-blue-400 font-semibold text-sm sm:text-base">Applications</div>
-                  <div className="text-xs sm:text-sm">UAVs, Loitering Munitions, Target Drones</div>
+                    <div className="text-xs sm:text-sm text-gray-300">UAVs, Loitering Munitions, Target Drones</div>
+                  </div>
                 </div>
               </div>
               
@@ -229,14 +340,17 @@ const Home = () => {
               </Link>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/20 to-gray-900/20 p-6 sm:p-8 rounded-lg border border-gray-700 order-1 lg:order-2">
-              <div className="text-center">
+            <div className="relative bg-gradient-to-br from-gray-900/30 to-black/50 p-6 sm:p-8 rounded-lg border border-gray-600/50 backdrop-blur-sm order-1 lg:order-2 overflow-hidden">
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-lg"></div>
+              
+              <div className="relative z-10 text-center">
                 <img 
                   src="/lovable-uploads/aab6d5f1-c76a-4509-91ed-0f70fa59cf5e.png" 
                   alt="TRJ-M1 Micro Jet Engine Technical Drawing" 
-                  className="w-full h-auto max-w-md mx-auto mb-4"
+                  className="w-full h-auto max-w-md mx-auto mb-4 filter drop-shadow-2xl"
                 />
-                <p className="text-gray-400 text-sm sm:text-base">High-Performance Micro Turbojet Engine</p>
+                <p className="text-gray-300 text-sm sm:text-base">High-Performance Micro Turbojet Engine</p>
               </div>
             </div>
           </div>
@@ -244,9 +358,100 @@ const Home = () => {
       </section>
 
       {/* Atmanirbhar Bharat Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center font-poppins">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-[200] mb-6 sm:mb-8">Atmanirbhar Bharat in Technology</h2>
+      <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
+        {/* Jet-themed space background */}
+        <div className="absolute inset-0 bg-black">
+          {/* Animated stars */}
+          <div className="absolute inset-0">
+            {/* Large stars */}
+            <div className="absolute top-14 left-18 w-1 h-1 bg-white rounded-full animate-pulse"></div>
+            <div className="absolute top-26 left-42 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-1000"></div>
+            <div className="absolute top-38 left-22 w-1 h-1 bg-white rounded-full animate-pulse delay-2000"></div>
+            <div className="absolute top-50 left-58 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse delay-500"></div>
+            <div className="absolute top-66 left-34 w-1 h-1 bg-white rounded-full animate-pulse delay-1500"></div>
+            <div className="absolute top-82 left-50 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-3000"></div>
+            <div className="absolute top-98 left-18 w-1 h-1 bg-white rounded-full animate-pulse delay-2500"></div>
+            
+            {/* More stars scattered */}
+            <div className="absolute top-22 right-26 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse delay-700"></div>
+            <div className="absolute top-34 right-42 w-1 h-1 bg-white rounded-full animate-pulse delay-1200"></div>
+            <div className="absolute top-50 right-22 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-1800"></div>
+            <div className="absolute top-70 right-38 w-1 h-1 bg-white rounded-full animate-pulse delay-2200"></div>
+            <div className="absolute top-90 right-30 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse delay-800"></div>
+            
+            {/* Additional stars for depth */}
+            <div className="absolute top-30 left-1/4 w-0.5 h-0.5 bg-blue-100 rounded-full animate-pulse delay-400"></div>
+            <div className="absolute top-54 left-3/4 w-1 h-1 bg-white rounded-full animate-pulse delay-1600"></div>
+            <div className="absolute top-78 left-1/3 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-2800"></div>
+            <div className="absolute top-94 left-2/3 w-1 h-1 bg-white rounded-full animate-pulse delay-600"></div>
+            
+            {/* Distant stars for more depth */}
+            <div className="absolute top-18 left-1/2 w-0.5 h-0.5 bg-blue-100 rounded-full animate-pulse delay-900"></div>
+            <div className="absolute top-42 left-1/5 w-0.5 h-0.5 bg-white rounded-full animate-pulse delay-1300"></div>
+            <div className="absolute top-58 left-4/5 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse delay-1900"></div>
+            <div className="absolute top-82 left-1/6 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-2400"></div>
+            <div className="absolute top-98 left-5/6 w-0.5 h-0.5 bg-white rounded-full animate-pulse delay-1100"></div>
+            
+            {/* Very distant tiny stars */}
+            <div className="absolute top-20 left-1/3 w-0.5 h-0.5 bg-blue-50 rounded-full animate-pulse delay-600"></div>
+            <div className="absolute top-74 left-2/5 w-0.5 h-0.5 bg-blue-100 rounded-full animate-pulse delay-1400"></div>
+            <div className="absolute top-90 left-1/8 w-0.5 h-0.5 bg-white rounded-full animate-pulse delay-2100"></div>
+          </div>
+          
+          {/* Jet exhaust trails */}
+          <div className="absolute inset-0">
+            {/* Main jet trail - diagonal from top-left to bottom-right */}
+            <div className="absolute top-10 left-10 w-1 h-32 bg-gradient-to-b from-transparent via-blue-400/30 to-transparent transform rotate-12 animate-pulse delay-1000"></div>
+            <div className="absolute top-12 left-12 w-0.5 h-28 bg-gradient-to-b from-transparent via-cyan-400/40 to-transparent transform rotate-12 animate-pulse delay-1500"></div>
+            
+            {/* Secondary jet trail - horizontal across middle */}
+            <div className="absolute top-1/2 left-0 w-64 h-0.5 bg-gradient-to-r from-transparent via-blue-300/20 to-transparent animate-pulse delay-2000"></div>
+            <div className="absolute top-1/2 left-0 w-48 h-0.5 bg-gradient-to-r from-transparent via-cyan-300/30 to-transparent animate-pulse delay-2500"></div>
+            
+            {/* Engine glow effects */}
+            <div className="absolute top-1/4 right-1/4 w-8 h-8 bg-blue-500/10 rounded-full blur-md animate-pulse delay-500"></div>
+            <div className="absolute top-1/4 right-1/4 w-4 h-4 bg-cyan-400/20 rounded-full blur-sm animate-pulse delay-800"></div>
+            
+            <div className="absolute bottom-1/3 left-1/3 w-6 h-6 bg-blue-400/15 rounded-full blur-lg animate-pulse delay-1200"></div>
+            <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-cyan-300/25 rounded-full blur-sm animate-pulse delay-1800"></div>
+          </div>
+          
+          {/* Flight path lines */}
+          <div className="absolute inset-0">
+            {/* Curved flight path */}
+            <div className="absolute top-1/4 left-1/4 w-32 h-32 border-l-2 border-t-2 border-blue-400/20 rounded-tl-full animate-pulse delay-3000"></div>
+            <div className="absolute top-1/3 left-1/3 w-24 h-24 border-l border-t border-cyan-400/30 rounded-tl-full animate-pulse delay-3500"></div>
+            
+            {/* Straight trajectory lines */}
+            <div className="absolute top-1/2 right-1/4 w-24 h-0.5 bg-gradient-to-r from-blue-400/30 to-transparent transform rotate-45 animate-pulse delay-4000"></div>
+            <div className="absolute bottom-1/4 left-1/2 w-20 h-0.5 bg-gradient-to-r from-cyan-400/25 to-transparent transform -rotate-30 animate-pulse delay-4500"></div>
+          </div>
+          
+          {/* Engine exhaust particles */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-blue-400/40 rounded-full animate-pulse delay-600"></div>
+            <div className="absolute top-1/4 right-1/4 w-0.5 h-0.5 bg-cyan-300/50 rounded-full animate-pulse delay-800"></div>
+            <div className="absolute top-1/4 right-1/4 w-0.5 h-0.5 bg-white/30 rounded-full animate-pulse delay-1000"></div>
+            
+            <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-blue-300/35 rounded-full animate-pulse delay-1400"></div>
+            <div className="absolute bottom-1/3 left-1/3 w-0.5 h-0.5 bg-cyan-400/45 rounded-full animate-pulse delay-1600"></div>
+            <div className="absolute bottom-1/3 left-1/3 w-0.5 h-0.5 bg-white/25 rounded-full animate-pulse delay-1800"></div>
+          </div>
+          
+          {/* Subtle nebula effect with jet theme */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/15 via-cyan-900/8 to-indigo-900/12"></div>
+          
+          {/* Cosmic dust particles with jet theme */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400/20 rounded-full blur-sm animate-pulse delay-2000"></div>
+            <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-cyan-400/30 rounded-full blur-sm animate-pulse delay-1500"></div>
+            <div className="absolute top-2/3 left-1/3 w-1.5 h-1.5 bg-indigo-400/25 rounded-full blur-sm animate-pulse delay-3000"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-1 h-1 bg-blue-300/20 rounded-full blur-sm animate-pulse delay-2500"></div>
+          </div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center font-poppins">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-[200] mb-6 sm:mb-8 text-white">Atmanirbhar Bharat in Technology</h2>
           <p className="font-[200] text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             We are proud contributors to India's vision of self-reliance in defence and technology. Vayuvya Defence 
             works closely with academia, industry experts, and innovators to build the next generation 
