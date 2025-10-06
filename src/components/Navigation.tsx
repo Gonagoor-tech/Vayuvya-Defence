@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
@@ -9,7 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const Navigation = () => {
+const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -17,14 +16,15 @@ const Navigation = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleNavClick = () => {
-    setIsMenuOpen(false);
-    scrollToTop();
-  };
-
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Products', path: '/products' },
+    { name: 'About Us', path: '/about', dropdown: [
+      { name: 'Company Overview', path: '/about#overview' },
+      { name: 'Team', path: '/team' },
+    ] },
+    { name: 'Products', path: '/products', dropdown: [
+      { name: 'M.A.L.E Uav', path: '/products#M.A.L.E Uav' }
+    ] },
     { name: 'News & Events', path: '/news-events' },
     { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },
@@ -50,55 +50,39 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link
-              to="/"
-              onClick={scrollToTop}
-              className={`text-sm font-medium transition-colors duration-200 ${
-                isActive('/')
-                  ? 'text-blue-400'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              Home
-            </Link>
-            
-            {/* About Us Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className={`text-sm font-medium transition-colors duration-200 flex items-center ${
-                isActive('/about') || isActive('/team')
-                  ? 'text-blue-400'
-                  : 'text-gray-300 hover:text-white'
-              }`}>
-                About Us <ChevronDown className="ml-1 h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-black/95 backdrop-blur-md border-gray-700 z-50">
-                <DropdownMenuItem asChild>
-                  <Link to="/about" onClick={scrollToTop} className="text-gray-300 hover:text-white cursor-pointer">
-                    Company Overview
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/team" onClick={scrollToTop} className="text-gray-300 hover:text-white cursor-pointer">
-                    Team
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            {navItems.slice(1).map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                onClick={scrollToTop}
-                className={`text-sm font-medium transition-colors duration-200 ${
-                  isActive(item.path)
-                    ? 'text-blue-400'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                {item.name}
-              </Link>
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium">
+            {navItems.map((item) => (
+              item.dropdown ? (
+                <DropdownMenu key={item.name}>
+                  <DropdownMenuTrigger
+                    className={`flex items-center transition-colors duration-200 ${
+                      isActive(item.path) ? 'text-blue-400' : 'text-gray-300 hover:text-white'
+                    }`}
+                  >
+                    {item.name} <ChevronDown className="ml-1 h-4 w-4" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="bg-black/95 backdrop-blur-md border-gray-700 z-50">
+                    {item.dropdown.map((sub) => (
+                      <DropdownMenuItem key={sub.name} asChild>
+                        <Link to={sub.path} onClick={scrollToTop} className="text-gray-300 hover:text-white cursor-pointer">
+                          {sub.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={scrollToTop}
+                  className={`transition-colors duration-200 ${
+                    isActive(item.path) ? 'text-blue-400' : 'text-gray-300 hover:text-white'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </div>
 
@@ -119,51 +103,38 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-black/95 backdrop-blur-md">
-              <Link
-                to="/"
-                onClick={handleNavClick}
-                className={`block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md ${
-                  isActive('/')
-                    ? 'text-blue-400 bg-blue-400/10'
-                    : 'text-gray-300 hover:text-white hover:bg-gray-700'
-                }`}
-              >
-                Home
-              </Link>
-              <div className="px-3 py-2">
-                <div className="text-gray-400 text-sm font-medium mb-2">About Us</div>
-                <Link
-                  to="/about"
-                  onClick={handleNavClick}
-                  className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md transition-colors duration-200"
-                >
-                  Company Overview
-                </Link>
-                <Link
-                  to="/team"
-                  onClick={handleNavClick}
-                  className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md transition-colors duration-200"
-                >
-                  Team
-                </Link>
+          <div className="md:hidden bg-black/95 backdrop-blur-md px-2 pt-2 pb-3 space-y-1">
+            {navItems.map((item) => (
+              <div key={item.name}>
+                {!item.dropdown ? (
+                  <Link
+                    to={item.path}
+                    onClick={() => { setIsMenuOpen(false); scrollToTop(); }}
+                    className={`block px-3 py-2 rounded-md transition-colors duration-200 ${
+                      isActive(item.path)
+                        ? 'text-blue-400 bg-blue-400/10'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-700'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <div className="px-3 py-2">
+                    <div className="text-gray-400 text-sm font-medium mb-2">{item.name}</div>
+                    {item.dropdown.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        to={sub.path}
+                        onClick={() => { setIsMenuOpen(false); scrollToTop(); }}
+                        className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md transition-colors duration-200"
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
-              {navItems.slice(1).map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={handleNavClick}
-                  className={`block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md ${
-                    isActive(item.path)
-                      ? 'text-blue-400 bg-blue-400/10'
-                      : 'text-gray-300 hover:text-white hover:bg-gray-700'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
+            ))}
           </div>
         )}
       </div>
