@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import { Dropdown } from "react-day-picker";
+import { Label } from "recharts";
 
 // Dropdown Arrow Icon
 const ChevronDown: React.FC<{ className?: string }> = ({ className }) => (
@@ -37,7 +39,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     {
       label: "Products",
       href: "/products",
-      dropdown: [{ label: "Maileuav", href: "/products#maileuav" }],
+      dropdown: [{ label: "M.A.L.E UAV", href: "/products#maileuav" },
+        {label: "Jet Engine", href:"/products"},
+        {label: "Advanced Drone", href:"/products"}
+      ],
+    
     },
     { label: "News & Events", href: "/news-events" },
     { label: "Careers", href: "/careers" },
@@ -54,7 +60,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center text-lg sm:text-xl font-extrabold text-white tracking-widest">
-            <div className="h-5 w-5 bg-blue-500 rounded-sm mr-2 transform rotate-45"></div>
+            <img src="\lovable-uploads\logo.png" alt="Vayuvya Logo" className="h-8 mr-2" />
             VAYUVYA <span className="text-blue-400 ml-1">DEFENCE</span>
           </Link>
 

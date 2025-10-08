@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
-const Home = () => {
+const Home: React.FC = () => {
   const capabilities = [
     { title: 'Indigenous Engine Design', description: 'Fully conceptualized and engineered in India to meet global defence standards.' },
     { title: 'High-Performance Micro Engines', description: 'Specialized in small turbine engines with high thrust-to-weight ratios.' },
@@ -28,13 +28,13 @@ const Home = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 text-left font-poppins">
-          <h1 className="font-poppins text-lg sm:text-xl md:text-2xl lg:text-4xl font-[200] mb-2 sm:mb-4 leading-tight tracking-tight">
+          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-[200] mb-2 sm:mb-4 leading-tight tracking-tight">
             Empowering India's Defence with
             <span className="text-blue-400 block mt-1 font-[200] text-sm sm:text-base md:text-lg lg:text-2xl">
               Advanced Technology Solutions
             </span>
           </h1>
-          <p className="font-[200] text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 mb-4 sm:mb-6 max-w-xl leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 mb-4 sm:mb-6 max-w-xl leading-relaxed">
             Made in India, Built for the Future
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start max-w-md sm:max-w-none">
@@ -54,7 +54,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Introduction Section */}
+      {/* Introduction */}
       <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black">
           <div className="absolute inset-0">
@@ -79,7 +79,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}lovable-uploads/lite.png')` }} />
         <div className="absolute inset-0 bg-black/70" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-poppins">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-[200] text-center mb-12 sm:mb-16">Our Capabilities</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-[200] text-center mb-12 sm:mb-16 text-white">Our Capabilities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {capabilities.map((capability, index) => (
               <div key={index} className="group relative bg-gradient-to-br from-gray-900/80 to-black/80 p-6 sm:p-8 rounded-xl border border-gray-700/50 backdrop-blur-sm transition-all duration-500 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer overflow-hidden">
@@ -88,7 +88,6 @@ const Home = () => {
                   <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">{capability.title}</h3>
                   <p className="text-sm sm:text-base text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{capability.description}</p>
                 </div>
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
           </div>
@@ -104,65 +103,12 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <div key={index} className="group relative bg-gradient-to-br from-gray-900/80 to-black/80 p-5 sm:p-6 rounded-xl border border-gray-700/50 backdrop-blur-sm transition-all duration-500 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
                 <div className="relative z-10">
                   <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">{feature.title}</h3>
                   <p className="text-xs sm:text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">{feature.description}</p>
                 </div>
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Product Section */}
-      <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-poppins">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-[200] mb-4 text-white">TRJ-M1 Micro Jet Engine</h3>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6">
-                The TRJ-M1 is a high-performance micro jet engine designed for UAVs, drones, and other strategic defence applications. It combines lightweight design, reliability, and indigenous technology for optimal performance.
-              </p>
-              <Link 
-                to="/products" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center w-fit"
-              >
-                View Product Details <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-            <div className="order-1 lg:order-2 flex justify-center">
-              <img 
-                src="/lovable-uploads/aab6d5f1-c76a-4509-91ed-0f70fa59cf5e.png" 
-                alt="TRJ-M1 Micro Jet Engine Technical Drawing" 
-                className="w-full h-auto max-w-xs sm:max-w-md mx-auto mb-4 filter drop-shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden bg-gradient-to-r from-blue-900 to-purple-900">
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-poppins text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-[200] mb-6 text-white">Join Us in Making India Atmanirbhar</h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Partner with Vayuvya Defence to leverage indigenous technology and innovate across aerospace, defence, and AI solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link 
-              to="/contact" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Contact Us
-            </Link>
-            <Link 
-              to="/products" 
-              className="border border-white text-white hover:bg-white hover:text-black px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Explore Products
-            </Link>
           </div>
         </div>
       </section>

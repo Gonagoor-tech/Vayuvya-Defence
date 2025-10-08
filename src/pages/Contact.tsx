@@ -36,12 +36,11 @@ const Contact = () => {
       <section className="relative w-full flex items-center justify-center text-center overflow-hidden">
         {/* Background image */}
         <div
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full h-full bg-contain md:bg-cover"
           style={{
             backgroundImage: `url('${import.meta.env.BASE_URL}lovable-uploads/R.png')`,
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: 'contain', // ensures full image is visible
             minHeight: '400px', // minimum height for mobile
             filter: 'brightness(0.6)',
           }}
