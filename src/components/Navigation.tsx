@@ -18,18 +18,21 @@ const Navigation: React.FC = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about', dropdown: [
-      { name: 'Company Overview', path: '/about#overview' },
-      { name: 'Team', path: '/team' },
-    ] },
-    { name: 'Products', path: '/products', dropdown: [
-      { name: 'M.A.L.E Uav', path: '/products#M.A.L.E Uav' }
-    ] },
+    { 
+      name: 'Products', 
+      path: '/products', 
+      dropdown: [
+        { name: 'M.A.L.E Uav', path: '/products#male-uav' },
+        { name: 'Jet Engine', path: '/products#jet-engine' },
+        { name: 'Advanced Drone', path: '/products#advanced-drone' },
+      ] 
+    },
+    { name: 'About Us', path: '/about' },
     { name: 'News & Events', path: '/news-events' },
     { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },
   ];
-
+  
   const isActive = (path: string) => location.pathname === path;
 
   return (
@@ -39,9 +42,9 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <Link to="/" onClick={scrollToTop} className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/e5ae8e77-1bb3-4c6a-888e-76ddf869d66d.png" 
+              src="/lovable-uploads/new_logo.png" 
               alt="Vayuvya Defence Logo" 
-              className="h-8 w-auto"
+              className="h-8 w-auto" 
             />
             <div className="text-2xl font-bold text-white">
               VAYUVYA

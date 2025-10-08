@@ -17,29 +17,33 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/aerospace" element={<Aerospace />} />
-            <Route path="/software" element={<Software />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/news-events" element={<NewsEvents />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App: React.FC = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        {/* Global Toasters */}
+        <Toaster />
+        <Sonner />
+        
+        <BrowserRouter>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/aerospace" element={<Aerospace />} />
+              <Route path="/software" element={<Software />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/news-events" element={<NewsEvents />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Layout>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

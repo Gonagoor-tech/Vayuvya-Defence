@@ -150,3 +150,13 @@ footer .absolute {
     font-size: 0.875rem;
   }
 }
+
+/* ✅ Fix: Make full hero background visible in mobile view */
+@media (max-width: 768px) {
+  .hero-section .absolute[inset-0] {
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-color: black; /* Prevent white background around image */
+  }
+}
