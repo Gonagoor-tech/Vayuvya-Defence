@@ -6,7 +6,7 @@ const Team = () => {
   const teamMembers = [
     {
       name: 'Dhanush D B',
-      role: 'Co-Founder & CTO',
+      role: 'Co-Founder & CEO',
       bio: 'Aerospace engineer with expertise in propulsion systems and advanced manufacturing. Leading the vision for indigenous defence technology development.',
       image: '/lovable-uploads/39a2fdae-d96c-404c-91b3-c9d798d32f97.png',
       initials: 'DD'
