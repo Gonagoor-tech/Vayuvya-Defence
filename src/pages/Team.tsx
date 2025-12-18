@@ -12,11 +12,11 @@ const Team = () => {
       initials: 'DD'
     },
     {
-      name: 'Prashanth Raghu',
-      role: 'SME/Seed Investor',
-      bio: 'Software architect and AI specialist focused on developing intelligent systems for aerospace applications and enterprise solutions.',
-      image: '/lovable-uploads/96b943e9-cb1f-4542-89e9-80f85ad9c037.png',
-      initials: 'PR'
+      name: 'Raghavendra',
+      role: 'CTO',
+      bio: 'Mechanical engineer specializing in micro-propulsion systems and satellite technology. Drives technical excellence across all product lines.',
+      image: '/lovable-uploads/3ad36d1d-996e-499e-9477-efd313c72130.png',
+      initials: 'RG'
     },
      {
       name: 'Nishant Kumar Dean',
@@ -25,13 +25,14 @@ const Team = () => {
       image: '/lovable-uploads/6065d473-f5ae-4551-9c0c-7354ed4dc584.png',
       initials: 'NK'
     },
-    {
-      name: 'Raghavendra',
-      role: 'CTO',
-      bio: 'Mechanical engineer specializing in micro-propulsion systems and satellite technology. Drives technical excellence across all product lines.',
-      image: '/lovable-uploads/3ad36d1d-996e-499e-9477-efd313c72130.png',
-      initials: 'RG'
+     {
+      name: 'Prashanth Raghu',
+      role: 'SME/Seed Investor',
+      bio: 'Software architect and AI specialist focused on developing intelligent systems for aerospace applications and enterprise solutions.',
+      image: '/lovable-uploads/96b943e9-cb1f-4542-89e9-80f85ad9c037.png',
+      initials: 'PR'
     }
+
    
   ];
 
