@@ -5,25 +5,11 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 const Team = () => {
   const teamMembers = [
     {
-      name: 'Prashanth Raghu',
-      role: 'Angel Investor & SME',
-      bio: 'Strategic expertise and investment support for innovation and growth, specializing in secure AI and software systems for aerospace and enterprise applications.',
-      image: '/lovable-uploads/96b943e9-cb1f-4542-89e9-80f85ad9c037.png',
-      initials: 'PR'
-    },
-    {
       name: 'Dhanush D B',
       role: 'Co-Founder & CEO',
       bio: 'Aerospace engineer with expertise in propulsion systems and advanced manufacturing. Leading the vision for indigenous defence technology development.',
       image: '/lovable-uploads/39a2fdae-d96c-404c-91b3-c9d798d32f97.png',
       initials: 'DD'
-    },
-     {
-      name: 'Nishant Kumar Dean',
-      role: ' CSO – Chief Strategy Officer',
-      bio: 'Experienced engineer contributing to cutting-edge aerospace technology development and system optimization for defence applications.',
-      image: '/lovable-uploads/6065d473-f5ae-4551-9c0c-7354ed4dc584.png',
-      initials: 'NK'
     },
     {
       name: 'Raghavendra',
@@ -31,6 +17,20 @@ const Team = () => {
       bio: 'Leads technology strategy, driving innovative and secure aerospace and defense solutions. Focused on turning advanced concepts into practical, high-performance systems.',
       image: '/lovable-uploads/3ad36d1d-996e-499e-9477-efd313c72130.png',
       initials: 'RG'
+    },
+    {
+      name: 'Nishant Kumar Dean',
+      role: ' CSO – Chief Strategy Officer',
+      bio: 'Experienced engineer contributing to cutting-edge aerospace technology development and system optimization for defence applications.',
+      image: '/lovable-uploads/6065d473-f5ae-4551-9c0c-7354ed4dc584.png',
+      initials: 'NK'
+    },
+    {
+      name: 'Prashanth Raghu',
+      role: 'Angel Investor & SME',
+      bio: 'Strategic expertise and investment support for innovation and growth, specializing in secure AI and software systems for aerospace and enterprise applications.',
+      image: '/lovable-uploads/96b943e9-cb1f-4542-89e9-80f85ad9c037.png',
+      initials: 'PR'
     }
   ];
 
@@ -48,7 +48,21 @@ const Team = () => {
       bio: 'Seasoned expert in aerospace engineering and technology development. Provides valuable insights on technical strategy and innovation.',
       image: '/lovable-uploads/e6b9e2e2-fccc-4e27-81c9-1fbb67e33d1a.png',
       initials: 'RM'
-    }
+    },
+    {
+  name: 'Dr. Allamaprabhu C Yaravintelimath',
+  role: 'Aerospace Research Advisor',
+  bio: 'Aerospace educator and researcher specializing in propulsion and CFD applications. Provides expert guidance on aerospace systems and research collaborations.',
+  image: '/lovable-uploads/Allamaprabhu.jpeg',
+  initials: 'AY'
+},
+{
+  name: 'Nirmalya Dasgupta',
+  role: 'Aviation Advisor',
+  bio: 'Veteran aviator and test pilot with 28 years of military experience across 32 aircraft types. Provides expert guidance on aviation safety, aircraft performance, and aerospace innovation.',
+  image: '/lovable-uploads/nirmalya.jpeg',
+  initials: 'ND'
+}
   ];
 
   const interns = [

@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -14,6 +15,7 @@ import NewsEvents from "./pages/NewsEvents";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import MaleUav from "./pages/MaleUav"; // ✅ ADDED
 
 const queryClient = new QueryClient();
 
@@ -24,7 +26,7 @@ const App: React.FC = () => {
         {/* Global Toasters */}
         <Toaster />
         <Sonner />
-        
+
         <BrowserRouter>
           <Layout>
             <Routes>
@@ -34,6 +36,7 @@ const App: React.FC = () => {
               <Route path="/aerospace" element={<Aerospace />} />
               <Route path="/software" element={<Software />} />
               <Route path="/products" element={<Products />} />
+              <Route path="/male-uav" element={<MaleUav />} /> {/* ✅ ADDED */}
               <Route path="/news-events" element={<NewsEvents />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/contact" element={<Contact />} />

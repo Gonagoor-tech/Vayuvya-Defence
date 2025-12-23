@@ -2,20 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 /**
  * Achievements - marquee/strip style scrolling achievements component
- * Expects images to live in public/lovable-uploads:
- *  - jet.jpg
- *  - certificate1.jpg
- *  - productBts.jpg
- *  - drdo.jpg
- *  - Gt.jpg
- *  - gonagoor.jpg
- *  - elevate.jpg
- *  - inspace.jpg
- *  - south.jpg
- *
- * This version uses a JS animation loop (requestAnimationFrame) to translate the strip
- * by the measured pixel width of the first set of items — avoids width:max-content while
- * ensuring all items (including newly added ones) appear.
+ * Expects images to live in public/lovable-uploads
  */
 
 const items = [
@@ -29,19 +16,20 @@ const items = [
   { id: 8, title: "InSpace validated design of satellites", img: `${import.meta.env.BASE_URL}lovable-uploads/inspace.jpg`, desc: "Our satellite design successfully passed InSpace validation, demonstrating reliability and readiness for space applications." },
   { id: 9, title: "South Park Commons Demo Night Finalists 2025", img: `${import.meta.env.BASE_URL}lovable-uploads/south.jpg`, desc: "Selected as finalists at the South Park Commons Demo Night 2025 for breakthrough technology demonstration." },
   { id: 10, title: "2400°C temperature on off-the-shelf aluminium — a world record", img: `${import.meta.env.BASE_URL}lovable-uploads/2000.jpg`, desc: "Achieved a world-record 2400°C temperature endurance using standard aluminium through proprietary engineering and thermal R&D." },
+
+  // New milestones
+  { id: 11, title: "Indigenous Jet Engine Debut at South Park Commons", img: `${import.meta.env.BASE_URL}lovable-uploads/southpark.jpeg`, desc: "Unveiled our homegrown jet engine at Bengaluru’s South Park Commons. Grateful to SPC and the audience for the enthusiasm and insightful conversations—fueling our mission to build world-class propulsion systems from India, for the world." },
+  { id: 12, title: "Historic Validation of India’s First Private Jet Engine", img: `${import.meta.env.BASE_URL}lovable-uploads/gt.jpeg`, desc: "Our engine was technically validated by the GTRE expert panel—a proud moment for every mind and effort behind it 🇮🇳. Grateful to GTRE for their guidance and support in making this possible." },
 ];
 
 const Achievements: React.FC = () => {
-  // duplicate items for smooth loop
   const loopItems = [...items, ...items];
-
-  // refs
   const trackRef = useRef<HTMLDivElement | null>(null);
   const listRef = useRef<HTMLDivElement | null>(null);
   const animationState = useRef({
     rafId: 0 as number | null,
     lastTime: 0,
-    pxPerSec: 120, // base speed in pixels per second (adjust to taste)
+    pxPerSec: 120,
     offset: 0,
     firstSetWidth: 0,
     paused: false,
@@ -52,66 +40,49 @@ const Achievements: React.FC = () => {
     const list = listRef.current;
     if (!track || !list) return;
 
-    // measure pixel width of first set of items (sum widths of first `items.length` children)
     const children = Array.from(list.children) as HTMLElement[];
-    // children length is items.length * 2
     const firstSetChildren = children.slice(0, items.length);
     let firstSetWidth = 0;
     firstSetChildren.forEach((c) => {
       firstSetWidth += c.getBoundingClientRect().width + parseFloat(getComputedStyle(c).marginRight || "0");
     });
 
-    // fallback: if computed width is 0 for some reason, estimate using scrollWidth / 2
-    if (!firstSetWidth) {
-      firstSetWidth = list.scrollWidth / 2;
-    }
+    if (!firstSetWidth) firstSetWidth = list.scrollWidth / 2;
+
     animationState.current.firstSetWidth = firstSetWidth;
     animationState.current.offset = 0;
     animationState.current.lastTime = performance.now();
-
-    // allow speed tuning: pxPerSec derived from desired loop duration (optional)
-    // e.g., if you want one full firstSet to pass in ~14s: pxPerSec = firstSetWidth / 14
     const desiredSeconds = 30;
-    animationState.current.pxPerSec = Math.max(60, firstSetWidth / desiredSeconds); // min speed guard
+    animationState.current.pxPerSec = Math.max(60, firstSetWidth / desiredSeconds);
 
-    // animation loop
     const step = (now: number) => {
       if (animationState.current.paused) {
         animationState.current.lastTime = now;
         animationState.current.rafId = requestAnimationFrame(step);
         return;
       }
-      const dt = (now - animationState.current.lastTime) / 1000; // seconds
+      const dt = (now - animationState.current.lastTime) / 1000;
       animationState.current.lastTime = now;
       const move = animationState.current.pxPerSec * dt;
       let newOffset = animationState.current.offset + move;
 
-      // if we've scrolled one first-set width, reset offset (loop)
       if (animationState.current.firstSetWidth > 0 && newOffset >= animationState.current.firstSetWidth) {
-        newOffset = newOffset - animationState.current.firstSetWidth;
+        newOffset -= animationState.current.firstSetWidth;
       }
 
       animationState.current.offset = newOffset;
-
-      // apply transform (negative to move left)
       list.style.transform = `translateX(${-animationState.current.offset}px)`;
-
       animationState.current.rafId = requestAnimationFrame(step);
     };
 
-    // start
     animationState.current.rafId = requestAnimationFrame(step);
 
-    // pause on hover / focus
-    const setPaused = (p: boolean) => {
-      animationState.current.paused = p;
-    };
+    const setPaused = (p: boolean) => { animationState.current.paused = p; };
     track.addEventListener("mouseenter", () => setPaused(true));
     track.addEventListener("mouseleave", () => setPaused(false));
     track.addEventListener("focusin", () => setPaused(true));
     track.addEventListener("focusout", () => setPaused(false));
 
-    // cleanup
     return () => {
       if (animationState.current.rafId) cancelAnimationFrame(animationState.current.rafId);
       track.removeEventListener("mouseenter", () => setPaused(true));
@@ -123,7 +94,6 @@ const Achievements: React.FC = () => {
 
   return (
     <section className="relative py-10 md:py-14 overflow-hidden" aria-labelledby="achievements-heading">
-      {/* faint background */}
       <div
         className="absolute inset-0 bg-cover bg-center pointer-events-none"
         style={{ backgroundImage: `url('${import.meta.env.BASE_URL}lovable-uploads/lite.png')`, opacity: 0.03 }}
@@ -139,9 +109,7 @@ const Achievements: React.FC = () => {
           A snapshot of our progress — certified recognitions, flagship product launches, and engineering milestones that drive India’s defence innovation forward.
         </p>
 
-        {/* Scroll container */}
         <div className="relative">
-          {/* The visible window */}
           <div
             ref={trackRef}
             className="overflow-hidden rounded-2xl border border-gray-800/60 bg-gradient-to-br from-black/60 to-black/70"
@@ -149,12 +117,9 @@ const Achievements: React.FC = () => {
             aria-label="Achievements marquee — hover to pause"
             tabIndex={0}
           >
-            {/* Track that will animate */}
             <div
               ref={listRef}
               className="flex items-stretch gap-6 py-6 px-6"
-              // we intentionally do NOT set width:max-content here (keeping layout identical)
-              // JS handles the translate loop using measured pixel width
             >
               {loopItems.map((item, idx) => (
                 <article
@@ -165,18 +130,15 @@ const Achievements: React.FC = () => {
                 >
                   <div className="w-full h-40 md:h-52 overflow-hidden">
                     <img
-  src={item.img}
-  alt={item.title}
-  className={
-    item.id === 6 || item.id === 7
-      ? "w-full h-full object-contain p-2 transition-transform duration-200"
-      : "w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
-  }
-  onError={(e) => {
-    (e.currentTarget as HTMLImageElement).style.opacity = "0.15";
-  }}
-/>
-
+                      src={item.img}
+                      alt={item.title}
+                      className={
+                        item.id === 6 || item.id === 7
+                          ? "w-full h-full object-contain p-2 transition-transform duration-200"
+                          : "w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
+                      }
+                      onError={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = "0.15"; }}
+                    />
                   </div>
 
                   <div className="p-4 sm:p-5">
@@ -188,7 +150,6 @@ const Achievements: React.FC = () => {
             </div>
           </div>
 
-          {/* Controls row (left empty intentionally) */}
           <div className="mt-4 flex items-center justify-between text-xs sm:text-sm text-gray-400">
             <div className="flex items-center gap-4" />
           </div>
@@ -199,4 +160,3 @@ const Achievements: React.FC = () => {
 };
 
 export default Achievements;
-

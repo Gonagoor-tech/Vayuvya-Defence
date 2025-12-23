@@ -71,7 +71,7 @@ const Contact = () => {
                 <div className="bg-black/50 p-6 rounded-lg border border-gray-700">
                   <h3 className="text-xl font-semibold mb-4 text-blue-400">Registered Address</h3>
                   <div className="text-gray-300">
-                    <p className="font-semibold">Vayuvya Defence Pvt. Ltd.</p>
+                    <p className="font-semibold">Vayuvya Raksha Systems Pvt. Ltd.</p>
                     <p>Bangalore</p>
                     <p>India</p>
                   </div>
