@@ -130,37 +130,6 @@ const Products: React.FC = () => {
         </div>
       </section>
 
-      {/* M.A.L.E UAV Section */}
-      <section id="male-uav" className="py-24 bg-black text-white px-6 scroll-mt-20">
-  <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-
-    <div className="flex-1">
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-        M.A.L.E UAV
-      </h2>
-
-            <p className="text-white/90 leading-relaxed text-lg md:text-xl">
-              Garuda Mk1 is Vayuvya Defence’s next-generation MALE (Medium Altitude Long Endurance) UAV,
-              engineered for persistent surveillance, border security, and tactical ISR missions.
-              Built with a lightweight composite airframe and advanced avionics, Garuda Mk1 delivers
-              long-endurance flight, high-altitude stability, and real-time intelligence capabilities.
-              <br /><br />
-              Designed for modular payloads—including EO/IR sensors, communication relays, and
-              synthetic-aperture radar—it enables multi-mission adaptability for defence and
-              homeland security operations.
-            </p>
-          </div>
-
-          <div className="flex-1 text-center">
-            <img
-              src="/lovable-uploads/Male-uav.jpeg"
-              alt="M.A.L.E UAV"
-              className="w-full h-auto max-w-lg mx-auto rounded-lg shadow-xl"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* (Remaining code exactly same...) */}
 
       {/* Specifications & Applications */}

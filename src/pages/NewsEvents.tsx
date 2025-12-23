@@ -48,7 +48,6 @@ const NewsEvents = () => {
       image: `${import.meta.env.BASE_URL}lovable-uploads/1af7ec95-8e51-4d54-8ad0-e73af0686cc1.png`,
       category: "Media"
     },
-    // ---- New News Items ----
     {
       id: 5,
       title: "Vayuvya Defence's MicroJet Engine",
@@ -68,6 +67,56 @@ const NewsEvents = () => {
       image: `${import.meta.env.BASE_URL}lovable-uploads/image.png`,
       category: "Innovation",
       link: "https://x.com/i/status/2000046196724043903"
+    },
+    {
+      id: 8,
+      title: "India Accelerates Indigenous Defence Push with TRJ-M1 Engine and Meteor Missile Procurement",
+      date: "December 2025",
+      location: "Bangalore, India",
+      description: "Bengaluru-based Vayuvya Defence has unveiled India’s first fully indigenous micro-turbojet engine, TRJ-M1, strengthening domestic aerospace propulsion capabilities. Simultaneously, the Indian Air Force is fast-tracking the acquisition of 1,200 Meteor beyond-visual-range missiles to enhance the combat effectiveness of its Tejas, Su-30MKI, and Rafale fleets, marking a decisive shift toward strategic self-reliance.",
+      image: `${import.meta.env.BASE_URL}lovable-uploads/pri.jpeg`,
+      category: "Defence & Aerospace",
+      link: "https://youtu.be/M5AlTrXXnxU?si=_2S3Vdgz7iVAlIUy"
+    },
+    {
+      id: 9,
+      title: "India’s Silent Engine Breakthrough | Make in India Game Changer",
+      date: "December 2025",
+      location: "Bangalore, India",
+      description: "India has unveiled a fully indigenous micro-turbofan engine that could redefine air warfare. Designed for drones, missiles, and swarm systems, this compact engine boosts speed, stealth, and affordability while ending dependence on foreign propulsion. A major step toward complete defence self-reliance.",
+      image: `${import.meta.env.BASE_URL}lovable-uploads/india.jpeg`,
+      category: "Defence Innovation",
+      link: "https://youtu.be/LoJeG3qt9p8?si=uLBbZw7WOnTaoIOV"
+    },
+    {
+      id: 10,
+      title: "Vayuvya Defence MicroJet Engine – Key Specs",
+      date: "December 2025",
+      location: "Alpha Defence",
+      description: "A compact, high-performance indigenous MicroJet engine designed for UAVs, loitering munitions, and target drones, offering quick assembly and reliable thrust for modern defense applications.",
+      image: `${import.meta.env.BASE_URL}lovable-uploads/micro.jpeg`,
+      category: "Aerospace Innovation",
+      link: "https://x.com/i/status/1999692285362208961"
+    },
+    {
+      id: 11,
+      title: "Vayuvya Defence TRJ-M1 MicroJet Engine Showcased",
+      date: "December 2025",
+      location: "TheDCIndia",
+      description: "Vayuvya Defence has unveiled the indigenous TRJ-M1 MicroJet Engine for UAVs, target drones, and loitering munitions, offering 4 kN thrust in a compact ~20 kg design with rapid field maintainability.",
+      image: `${import.meta.env.BASE_URL}lovable-uploads/def.jpeg`,
+      category: "Defense Technology",
+      link: "https://x.com/TheDCIndia/status/1999888798772277420"
+    },
+    {
+      id: 12,
+      title: "India’s New Breakthrough – Micro Turbojet Engine & Major Defence Updates",
+      date: "December 2025",
+      location: "Bangalore, India",
+      description: "This video covers India’s indigenous TRJ-M1 micro turbojet engine by Vayuvya Defence, S-400 modernization lessons from the Ukraine war, General Atomics’ Gambit-2 combat drone pitch to India, DRDO’s marine-grade AC compressor under TDF, and the Indian Army’s SAKSHAM counter-UAS expansion—highlighting India’s growing defence self-reliance.",
+      image: `${import.meta.env.BASE_URL}lovable-uploads/iit.jpeg`,
+      category: "Defense & Strategic Affairs",
+      link: "https://youtu.be/RrEawwh9XOI?si=grZ0vDSx9svoXBq-"
     }
   ];
 

@@ -79,24 +79,21 @@ const Footer = () => {
                 Micro Jet Engines
               </Link>
 
-              <p>Satellite Propulsion</p>
-
               {/* UAV Systems */}
               <Link
-                to="/products#male-uav"
-                onClick={scrollToTop}
-                className="block hover:text-blue-400 transition"
-              >
-                UAV Systems
-              </Link>
-
+  to="/male-uav" // route path
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} // scroll to top
+  className="block hover:text-blue-400 transition"
+>
+  UAV Systems
+</Link>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            © 2024 Vayuvya Defence Pvt. Ltd. All rights reserved. | Supporting Atmanirbhar Bharat
+            © 2024 Vayuvya Raksha Systems Pvt. Ltd. All rights reserved. | Supporting Atmanirbhar Bharat
           </p>
         </div>
       </div>

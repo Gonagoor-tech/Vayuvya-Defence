@@ -59,9 +59,13 @@ const Navigation: React.FC = () => {
             About Us
           </Link>
 
-          <Link to="/contact" className="hover:text-blue-400 transition">
-            Contact
-          </Link>
+          <Link
+  to="/contact" // route path
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  className="block hover:text-blue-400 transition"
+>
+  Contact
+</Link>
         </div>
 
         {/* Mobile placeholder */}
