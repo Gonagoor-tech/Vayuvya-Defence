@@ -40,7 +40,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       dropdown: [
         { label: "M.A.L.E UAV", href: "/male-uav" }, // ✅ FIXED
         { label: "Jet Engine", href: "/products" },
-        { label: "Advanced Drone", href: "/products" },
       ],
     },
     { label: "News & Events", href: "/news-events" },

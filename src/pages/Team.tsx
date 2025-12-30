@@ -19,13 +19,6 @@ const Team = () => {
       initials: 'RG'
     },
     {
-      name: 'Nishant Kumar Dean',
-      role: ' CSO – Chief Strategy Officer',
-      bio: 'Experienced engineer contributing to cutting-edge aerospace technology development and system optimization for defence applications.',
-      image: '/lovable-uploads/6065d473-f5ae-4551-9c0c-7354ed4dc584.png',
-      initials: 'NK'
-    },
-    {
       name: 'Prashanth Raghu',
       role: 'Angel Investor & SME',
       bio: 'Strategic expertise and investment support for innovation and growth, specializing in secure AI and software systems for aerospace and enterprise applications.',
