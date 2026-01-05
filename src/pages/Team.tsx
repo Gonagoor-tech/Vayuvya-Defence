@@ -65,7 +65,14 @@ const Team = () => {
       bio: 'Embedded systems intern focusing on firmware for microcontrollers, RTOS applications, hardware bring-up, C/C++ drivers and sensor integration for aerospace and defence platforms.',
       image: '/lovable-uploads/vijay vittal.png',
       initials: 'VV'
-    }
+    },
+    {
+  name: 'Irfan Ali',
+  role: 'Propulsion Intern',
+  bio: 'Propulsion Intern passionate about aerospace systems, currently gaining hands-on experience in propulsion testing, analysis, and design support.',
+  image: '/lovable-uploads/irfan.jpeg',
+  initials: 'IA'
+}
   ];
 
   return (
