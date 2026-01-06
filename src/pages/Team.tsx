@@ -72,7 +72,14 @@ const Team = () => {
   bio: 'Propulsion Intern passionate about aerospace systems, currently gaining hands-on experience in propulsion testing, analysis, and design support.',
   image: '/lovable-uploads/irfan.jpeg',
   initials: 'IA'
-}
+},
+{
+  name: 'Kalyan Kumar',
+  role: 'Propulsion Intern',
+  bio: 'Focused on hands-on learning in aerospace propulsion, contributing to engine testing, performance assessment, and preliminary design tasks.',
+  image: '/lovable-uploads/kalyank.png',
+  initials: 'KK'
+},
   ];
 
   return (
