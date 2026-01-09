@@ -18,13 +18,6 @@ const Team = () => {
       image: '/lovable-uploads/3ad36d1d-996e-499e-9477-efd313c72130.png',
       initials: 'RG'
     },
-    {
-      name: 'Prashanth Raghu',
-      role: 'Angel Investor & SME',
-      bio: 'Strategic expertise and investment support for innovation and growth, specializing in secure AI and software systems for aerospace and enterprise applications.',
-      image: '/lovable-uploads/96b943e9-cb1f-4542-89e9-80f85ad9c037.png',
-      initials: 'PR'
-    }
   ];
 
   const advisors = [
@@ -55,7 +48,14 @@ const Team = () => {
   bio: 'Veteran aviator and test pilot with 28 years of military experience across 32 aircraft types. Provides expert guidance on aviation safety, aircraft performance, and aerospace innovation.',
   image: '/lovable-uploads/nirmalya.jpeg',
   initials: 'ND'
-}
+},
+{
+      name: 'Prashanth Raghu',
+      role: 'Angel Investor & SME',
+      bio: 'Strategic expertise and investment support for innovation and growth, specializing in secure AI and software systems for aerospace and enterprise applications.',
+      image: '/lovable-uploads/96b943e9-cb1f-4542-89e9-80f85ad9c037.png',
+      initials: 'PR'
+    }
   ];
 
   const interns = [
